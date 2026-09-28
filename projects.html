@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Student Portfolio Platform" />
+    <meta property="og:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Student Portfolio Platform" />
+    <meta name="twitter:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <title>Student Portfolio Platform | Discover IT Talent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 1. Embed the Google Font Link -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#EEF2FB] font-Inter">
+    <!-- Navbar -->
+    <header class="bg-white border-b border-gray-100  w-[100%]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
+
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-3">
+                <img class="w-16 h-16 object-contain" src="./images/logo.png" alt="Student Portfolio Logo" />
+                <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> Student Portfolio </h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8 font-medium text-gray-600">
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./index.html"> Home </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="students.html"> Students </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="projects.html"> Projects </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="create-portfolio.html"> Create
+                            Portfolio </a> </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA / Auth Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
+                    href="#">
+                    <i class="fa-regular fa-user mr-2"></i> Login
+                </a>
+                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors hover:-translate-y-1 transition-all duration-300"
+                    href="#">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-expanded="false"
+                class="md:hidden text-slate-600 hover:text-[#2563EB] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition"
+                aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default using 'hidden') -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <nav class="px-4 py-5">
+
+                <!-- Links -->
+                <div class="flex flex-col gap-1">
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-house mr-3 w-5"></i> Home
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-users mr-3 w-5"></i> Students
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
+                    </a>
+                </div>
+
+                <!-- Mobile Buttons -->
+                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="#"
+                        class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
+                        <i class="fa-regular fa-user mr-2"></i> Login
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Get Started
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <body class="bg-[#EEF2FB]">
+        <!-- Navbar -->
+        <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-100 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
+
+                <!-- Logo & Title -->
+                <div class="flex items-center gap-3">
+                    <img class="w-16 h-16 object-contain" src="./images/logo.png" alt="Student Portfolio Logo" />
+                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> Student Portfolio </h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex items-center gap-8 font-medium text-gray-600">
+                        <li> <a class="hover:text-[#2563EB] transition-colors" href="./index.html"> Home </a> </li>
+                        <li> <a class="hover:text-[#2563EB] transition-colors" href="./students.html"> Students </a>
+                        </li>
+                        <li> <a class="hover:text-[#2563EB] transition-colors" href="./projects.html"> Projects </a>
+                        </li>
+                        <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Create Portfolio </a> </li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop CTA / Auth Buttons -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
+                        href="./Login.html">
+                        <i class="fa-regular fa-user mr-2"></i> Login
+                    </a>
+                    <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-color hover:-translate-y-1 transition-all duration-300"
+                        href="#">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-expanded="false"
+                    class="md:hidden text-slate-600 hover:text-[#2563EB] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition"
+                    aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default using 'hidden') -->
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+                <nav class="px-4 py-5">
+
+                    <!-- Links -->
+                    <div class="flex flex-col gap-1">
+                        <a href="#"
+                            class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                            <i class="fa-solid fa-house mr-3 w-5"></i> Home
+                        </a>
+                        <a href="#"
+                            class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                            <i class="fa-solid fa-users mr-3 w-5"></i> Students
+                        </a>
+                        <a href="#"
+                            class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                            <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
+                        </a>
+                        <a href="#"
+                            class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                            <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
+                        </a>
+                    </div>
+
+                    <!-- Mobile Buttons -->
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                        <a href="#"
+                            class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
+                            <i class="fa-regular fa-user mr-2"></i> Login
+                        </a>
+                        <a href="#"
+                            class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Get Started
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Student Portfolio Showcase -->
+
+        <section class=" py-8 sm:py-10 lg:py-12">
+
+            <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+
+
+                <div class="mb-6 sm:mb-8">
+
+                    <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl">
+                        Student Projects Showcase
+                    </h2>
+
+                    <p class="mt-2 max-w-4xl text-sm leading-6 text-slate-500 sm:text-base lg:text-lg">
+                        Explore real-world web apps, mobile solutions, AI models, and IoT
+                        systems built by students
+                    </p>
+
+                </div>
+
+                <!-- search projects title or description -->
+
+                <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+
+                    <!-- Search / Select -->
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
+
+                        <!-- Search -->
+                        <div class="relative">
+
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-lg text-slate-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-search preview-icon">
+                                    <path d="m21 21-4.34-4.34" />
+                                    <circle cx="11" cy="11" r="8" />
+                                </svg>
+                            </span>
+
+                            <input type="text" placeholder="Search project title or description..."
+                                class="h-12 w-full rounded-xl border border-slate-200 pl-11 pr-4 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 sm:text-base">
+
+
+                        </div>
+
+                        <!-- Categories -->
+
+                        <div class="relative">
+                            <select
+                                class="h-12 w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 pr-10 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 sm:text-base">
+                                <option>All Categories</option>
+                                <option>Web Development</option>
+                                <option>Mobile App</option>
+                                <option>UI/UX</option>
+                                <option>Python</option>
+                                <option>Database</option>
+                                <option>IoT</option>
+                                <option>AI</option>
+                            </select>
+
+                            <!-- Dropdown icon -->
+
+                            <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+                                <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+                            </div>
+                        </div>
+
+                        <!-- Technologies -->
+
+                        <div class="relative">
+                            <select
+                                class="h-12 w-full appearance-none rounded-xl border border-slate-200 bg-white px-4 pr-10 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 sm:text-base">
+                                <option>All Technologies</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>JavaScript</option>
+                                <option>React</option>
+                                <option>Python</option>
+                                <option>Node.js</option>
+                                <option>PHP</option>
+                                <option>MySQL</option>
+                            </select>
+
+                            <!-- Dropdown icon -->
+
+                            <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center">
+                                <i class="fa-solid fa-chevron-down text-sm text-slate-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Divider -->
+                    <div class="my-4 border-t border-slate-200 sm:my-5"></div>
+
+
+                    <!--Group of buttons-->
+
+                    <div class="flex flex-wrap gap-2 sm:gap-3">
+
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            All
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            create personal portfolio
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            library system Dashboard
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            AI
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            HealthSync Mobile
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            Database
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            IoT
+                        </button>
+
+                        <button
+                            class="rounded-full bg-slate-100 px-4 py-2 text-xs font-medium text-slate-700 transition hover:bg-blue-100 sm:text-sm">
+                            AI
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PROJECTS 1  -->
+
+                <div class="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
+                    <article
+                        class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                        <div class="relative h-48 sm:h-52 lg:h-56">
+
+                            <img src="./images/image.png" alt="Students working on laptops"
+                                class="h-full w-full object-cover">
+
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
+                                personal portfolio
+                            </span>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="p-5 sm:p-6">
+
+                            <p class="text-sm font-medium text-blue-600">
+                                By Yasmin TOYEB
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                                CampusConnect Platform
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
+                                A collaborative student directory and study group finder
+                                built with modern HTML, Tailwind CSS, and JS.
+                            </p>
+
+
+                            <!-- Technologies -->
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    HTML
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Tailwind CSS
+                                </span>
+
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    JavaScript
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Firebase
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                            <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                                <i class="fa-regular fa-eye mr-1"></i>
+                                Details
+                            </a>
+
+                            <div class="flex gap-5 text-slate-500">
+
+                                <a href="#" class="hover:text-slate-900">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="#" class="hover:text-blue-600">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article
+                        class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                        <div class="relative h-48 sm:h-52 lg:h-56">
+
+                            <img src="https://i.pinimg.com/1200x/df/dc/09/dfdc096e5f9bcf6a04c635156656dad7.jpg"
+                                alt="UI UX design" class="h-full w-full object-cover">
+
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
+                                library system Dashboard
+                            </span>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="p-5 sm:p-6">
+
+                            <p class="text-sm font-medium text-blue-600">
+                                By Lyhov SIN
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                                Library System Dashboard
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
+                                Library System is a simple dashboard for managing books, borrowers, and library records
+                                efficiently.
+                            </p>
+
+
+                            <!-- Technologies -->
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    React
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Tailwind
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Node.js
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                            <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                                <i class="fa-regular fa-eye mr-1"></i>
+                                Details
+                            </a>
+
+                            <div class="flex gap-5 text-slate-500">
+
+                                <a href="#" class="hover:text-slate-900">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="#" class="hover:text-blue-600">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article
+                        class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                        <div class="relative h-48 sm:h-52 lg:h-56">
+
+                            <img src="https://i.pinimg.com/736x/6c/2c/ea/6c2ceaa1c1c6dbb32ee9284f21ab7068.jpg"
+                                alt="Earth from space" class="h-full w-full object-cover">
+
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
+                                AI
+                            </span>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="p-5 sm:p-6">
+
+                            <p class="text-sm font-medium text-blue-600">
+                                By Sall Kimhour
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                                EcoTrack AI Carbon Monitor
+                            </h3>
+
+
+                            <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
+                                Machine learning application analyzing individual daily
+                                carbon footprints with personalized reduction actions.
+                            </p>
+
+
+                            <!-- Technologies -->
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Python
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    PyTorch
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    React
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    FastAPI
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-slate-100 px-6 py-4 flex items-center justify-between">
+
+                            <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                                <i class="fa-regular fa-eye mr-1"></i>
+                                Details
+                            </a>
+
+                            <div class="flex gap-5 text-slate-500">
+
+                                <a href="#" class="hover:text-slate-900">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="#" class="hover:text-blue-600">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </article>
+
+                    <!-- PROJECT 4 -->
+
+                    <article
+                        class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                        <div class="relative h-48 sm:h-52 lg:h-56">
+
+                            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/935a02211495055.Y3JvcCwxNDAwLDEwOTUsMCw2.png"
+                                alt="Earth from space" class="h-full w-full object-cover">
+
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
+                                Mobile App
+                            </span>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="p-5 sm:p-6">
+
+                            <p class="text-sm font-medium text-blue-600">
+                                By Alex Chen
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                                HealthSync Mobile
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
+                                Cross-platform mobile application for tracking daily fitness metrics and sync with
+                                Bluetooth
+                                IoT sensors.
+                            </p>
+
+
+                            <!-- Technologies -->
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Python
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    PyTorch
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    React
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    FastAPI
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                            <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                                <i class="fa-regular fa-eye mr-1"></i>
+                                Details
+                            </a>
+
+                            <div class="flex gap-5 text-slate-500">
+
+                                <a href="#" class="hover:text-slate-900">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="#" class="hover:text-blue-600">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </article>
+
+                    <!-- PROJECT 5 -->
+
+                    <article
+                        class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                        <div class="relative h-48 sm:h-52 lg:h-56">
+
+
+                            <img src="https://i.pinimg.com/736x/65/e7/a1/65e7a1bc3c3e2140b8dcb974aab4c63e.jpg"
+                                alt="Students working on laptops" class="h-full w-full object-cover">
+
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
+                                Booking System
+                            </span>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="p-5 sm:p-6">
+
+                            <p class="text-sm font-medium text-blue-600">
+                                By Thida ONCHU
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                                Booking System Room
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
+                                A web-based booking system for managing reservations and appointments
+                                built with modern HTML, Tailwind CSS, and JS.
+                            </p>
+
+
+                            <!-- Technologies -->
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    HTML
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Tailwind CSS
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    JavaScript
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Firebase
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                            <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                                <i class="fa-regular fa-eye mr-1"></i>
+                                Details
+                            </a>
+
+                            <div class="flex gap-5 text-slate-500">
+
+                                <a href="#" class="hover:text-slate-900">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="#" class="hover:text-blue-600">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </article>
+
+                    <!-- PROJECT 6 -->
+
+                    <article
+                        class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+
+                        <div class="relative h-48 sm:h-52 lg:h-56">
+
+                            <img src="https://i.pinimg.com/736x/06/6f/7b/066f7bf290f8e337624c415a87b8ca7c.jpg"
+                                alt="Students working on laptops" class="h-full w-full object-cover">
+
+                            <span
+                                class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
+                                E-commerce
+                            </span>
+
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="p-5 sm:p-6">
+
+                            <p class="text-sm font-medium text-blue-600">
+                                By Chantrea Ny
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                                E-commerce Website
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
+                                A modern e-commerce website where customers can easily browse and discover products.
+
+                            </p>
+
+
+                            <!-- Technologies -->
+                            <div class="mt-5 flex flex-wrap gap-2">
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    HTML
+                                </span>
+
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Tailwind CSS
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    JavaScript
+                                </span>
+
+                                <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
+                                    Firebase
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                            <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                                <i class="fa-regular fa-eye mr-1"></i>
+                                Details
+                            </a>
+
+                            <div class="flex gap-5 text-slate-500">
+
+                                <a href="#" class="hover:text-slate-900">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="#" class="hover:text-blue-600">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- footer -->
+
+        <footer class="bg-[#0F172A] text-white px-12 py-12">
+            <div class="flex flex-row justify-around gap-12 mb-28">
+                <div class="w-72 flex-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
+                            alt="Student Portfolio Logo" />
+                        <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
+                            Portfolio </h1>
+                    </div>
+                    <p class="text-sm text-gray-400">A portfolio platform for university students, developers and
+                        beginners
+                        in tech.</p>
+                </div>
+
+                <!-- Quick links -->
+
+                <div class="flex-1 flex flex-col gap-3">
+                    <h3 class="">Quick links</h3>
+                    <div class="text-gray-400 flex flex-col text-sm  gap-2">
+                        <a href="" class="hover:text-white duration-200">Home</a>
+                        <a href="" class="hover:text-white duration-200">students</a>
+                        <a href="" class="hover:text-white duration-200">Project</a>
+                        <a href="" class="hover:text-white duration-200">Create portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Project categories -->
+
+                <div class="flex-1 flex flex-col gap-3 ">
+                    <h3>Project categories</h3>
+                    <div class="flex flex-col text-gray-400 text-sm gap-2">
+                        <a href="" class="hover:text-white duration-200">Web Development</a>
+                        <a href="" class="hover:text-white duration-200">Python & Data Science</a>
+                        <a href="" class="hover:text-white duration-200">Mobile Applications</a>
+                        <a href="" class="hover:text-white duration-200">UI/UX Design</a>
+                    </div>
+                </div>
+
+                <!-- Connect -->
+
+                <div class="flex-1 flex flex-col gap-3">
+                    <h3>Connect</h3>
+                    <p class="text-sm text-gray-400">Helping the next generation of <br> software engineers and creators
+                        get
+                        noticed.</p>
+                    <div class="flex gap-8">
+
+                        <!-- github -->
+
+                        <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio">
+                            <i class="fa-brands fa-github" class="hover:"></i>
+                        </a>
+
+                        <!-- Linked in -->
+
+                        <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <!-- Twitter -->
+
+                        <a href="https://x.com/giimin4awr"
+                            class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <!-- Email -->
+
+                        <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act"
+                            class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-700 mb-6">
+
+            <div class="text-sm text-gray-400 flex flex-row justify-between"
+                class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
+                <div class="flex flex-row gap-6">
+                    <a href="" class="hover:text-white duration-200">Privacy policy</a>
+                    <a href="" class="hover:text-white duration-200">Terms of service</a>
+                    <a href="" class="hover:text-white duration-200">Student guidelines</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+
+        document.querySelectorAll("#mobile-menu-btn").forEach(menuBtn => {
+            const header = menuBtn.closest("header");
+            const mobileMenu = header.querySelector("#mobile-menu");
+            const menuIcon = menuBtn.querySelector("#menu-icon");
+
+            const closeMenu = () => {
+                mobileMenu.classList.add("hidden");
+                menuIcon.classList.remove("fa-xmark");
+                menuIcon.classList.add("fa-bars");
+                menuBtn.setAttribute("aria-expanded", "false");
+            };
+
+            menuBtn.addEventListener("click", () => {
+                const isOpening = mobileMenu.classList.contains("hidden");
+                mobileMenu.classList.toggle("hidden");
+                menuIcon.classList.toggle("fa-bars", !isOpening);
+                menuIcon.classList.toggle("fa-xmark", isOpening);
+                menuBtn.setAttribute("aria-expanded", String(isOpening));
+            });
+
+            mobileMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", closeMenu);
+            });
+        });
+
+    </script>
+
+</html>
