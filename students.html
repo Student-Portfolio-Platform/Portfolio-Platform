@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[#EEF2FB]">
+    <script type="module" src="/src/main.ts"></script>
+    <header class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
+
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-3">
+                <img class="w-16 h-16 object-contain" src="./images/logo.png" alt="Student Portfolio Logo" />
+                <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> Student Portfolio </h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8 font-medium text-gray-600">
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Home </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Students </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Projects </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Create Portfolio </a> </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA / Auth Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
+                    href="#">
+                    <i class="fa-regular fa-user mr-2"></i> Login
+                </a>
+                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    href="#">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                class="md:hidden text-slate-600 hover:text-[#2563EB] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition"
+                aria-label="Open menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default using 'hidden') -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <nav class="px-4 py-5">
+
+                <!-- Links -->
+                <div class="flex flex-col gap-1">
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-house mr-3 w-5"></i> Home
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-users mr-3 w-5"></i> Students
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
+                    </a>
+                </div>
+
+                <!-- Mobile Buttons -->
+                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="#"
+                        class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
+                        <i class="fa-regular fa-user mr-2"></i> Login
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Get Started
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- Students Header -->
+    <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-2">
+        <h1 class=" text-3xl font-extrabold">Student Directory</h1>
+        <P class="text-[#6B7280] mt-1">Discover, filter, and connect with talented students across various disciplines
+        </P>
+    </header>
+    <!-- form -->
+    <form id="dir-filters" class="p-5 rounded-2xl border border-slate-200 shadow-card mb-8 space-y-4 ">
+        <div class="bg-white mx-10 px-4 sm:px-6 lg:px-8 py-8 rounded-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                <div class="relative">
+                    <label for="dir-search-name" class="sr-only">Search by name</label>
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"
+                        aria-hidden="true"></i>
+                    <input type="search" id="dir-search-name" placeholder="Search student name" class="field pl-9 w-full max-w-xs appearance-none
+                    px-4 py-2.5 pr-10
+                    border-2 rounded-xl
+                    bg-white text-gray-800
+                    outline-none
+                    transition-all duration-200
+                    hover:border-blue-600 hover:shadow-md
+                    focus:border-blue-600 focus:ring-2 focus:ring-blue-200
+                    cursor-pointe">
+                </div>
+                <div class="relative w-full sm:w-auto sm:min-w-[200px] max-w-xs">
+                    <label for="dir-filter-skill" class="sr-only">Skill</label>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </div>
+                    <select id="dir-filter-skill" class="w-full max-w-xs appearance-none
+                                px-4 py-2.5 pr-10
+                                border-2 rounded-xl
+                                bg-white text-gray-800
+                                outline-none
+                                transition-all duration-200
+                                hover:border-blue-600 hover:shadow-md
+                                focus:border-blue-600 focus:ring-2 focus:ring-blue-200
+                                cursor-pointe">
+                        <option value="">All skills</option>
+                        <option value="">C++</option>
+                        <option value="">Flutter</option>
+                        <option value="">HTML/CSS</option>
+                        <option value="">JavaScript</option>
+                        <option value="">Nod.js</option>
+                        <option value="">Python</option>
+                        <option value="">React</option>
+                        <option value="">UX/UI Design</option>
+                    </select>
+                </div>
+                <div class="relative w-full sm:w-auto sm: max-w-xs">
+                    <label for="dir-filter-major" class="sr-only">Major</label>
+                    <select id="dir-filter-major" class="w-full max-w-xs appearance-none
+                                px-4 py-2.5 pr-10
+                                border-2 rounded-xl
+                                bg-white text-gray-800
+                                outline-none
+                                transition-all duration-200
+                                hover:border-blue-600 hover:shadow-md
+                                focus:border-blue-600 focus:ring-2 focus:ring-blue-200
+                                cursor-pointe">
+                        <option value="">All majors</option>
+                        <option value="">Computer Science</option>
+                        <option value="">Cyber Security</option>
+                        <option value="">Data Science</option>
+                        <option value="">Information Systems</option>
+                        <option value="">Software Engineering</option>
+                        <option value="">Web Development</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </div>
+                    <div class="w-full sm:w-auto sm:min-w-[200px] max-w-xs"></div>
+                </div>
+                <div class="relative w-full sm:w-auto sm:min-w-[200px] max-w-xs">
+                    <label for="dir-filter-university" class="sr-only">University</label>
+                    <select id="dir-filter-university" class="w-full max-w-xs appearance-none
+                                px-4 py-2.5 pr-10
+                                border-2 rounded-xl
+                                bg-white text-gray-800
+                                outline-none
+                                transition-all duration-200
+                                hover:border-blue-600 hover:shadow-md
+                                focus:border-blue-600 focus:ring-2 focus:ring-blue-200
+                                cursor-pointe">
+                        <option value="">All University</option>
+                        <option value="">ETH Zurich</option>
+                        <option value="">MIT</option>
+                        <option value="">Royal University Phnom Penh</option>
+                        <option value="">Standford University</option>
+                        <option value="">UC Berkeley</option>
+                        <option value="">University of Toronto </option>
+                        <option value="">All universities</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-sm">
+                <span id="directory-result-count" class="text-slate-600" aria-live="polite">Showing all students</span>
+                <button type="button" id="dir-reset"
+                    class="text-primary-700 font-semibold hover:underline text-blue-600">Reset
+                    filters</button>
+            </div>
+        </div>
+    </form>
+    <!-- Student card -->
+    <section class="px-4 sm:px-6 lg:px-14 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col
+                    transition-all duration-300 ease-in-out
+                    hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-start gap-4">
+                    <img src="/images/lyhov.jpg" alt="Meta Poleng"
+                        class="w-14 h-14 rounded-xl object-cover bg-amber-200">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Sin Lyhov</h3>
+                        <p class="text-blue-600 text-sm font-medium">IT Student & Web Developer</p>
+                        <p class="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                            <span>🎓</span> Royal University of Phnom Penh
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed">
+                    Passionate First-year IT student focused on full-stack web development and clean UI/UX designs.
+                    Eager
+                    to solve real-world problems through modern web technologies.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">HTML / CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Python</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">React</span>
+                </div>
+
+                <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-100">
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                        <span>📍</span> Phnom Penh
+                    </div>
+                    <button
+                        class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
+                        View portfolio
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col
+                    transition-all duration-300 ease-in-out
+                    hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-start gap-4">
+                    <img src="./images/yasmin.jpg" alt="Toyeb Yasmin"
+                        class="w-14 h-14 rounded-xl object-cover bg-amber-200">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Toyeb Yasmin</h3>
+                        <p class="text-blue-600 text-sm font-medium">IT Student & Web Developer</p>
+                        <p class="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                            <span>🎓</span> Royal University of Phnom Penh
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed">
+                    Passionate first-year IT student focused on full-stack web development and clean UI/UX designs.
+                    Eager to solve real-world problems through modern web technologies.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">HTML / CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Python</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">React</span>
+                </div>
+
+                <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-100">
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                        <span>📍</span> Phnom Penh
+                    </div>
+                    <button
+                        class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
+                        View portfolio
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col  
+                    transition-all duration-300 ease-in-out
+                    hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-start gap-4">
+                    <img src="./images/thida.jpg" alt="Sokha Chan"
+                        class="w-14 h-14 rounded-xl object-cover bg-amber-200">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Onchu Thida</h3>
+                        <p class="text-blue-600 text-sm font-medium">IT Student & Frontend Developer</p>
+                        <p class="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                            <span>🎓</span> Royal University of Phnom Penh
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed">
+                    -year student who loves building beautiful and responsive interfaces. Currently focusing on React
+                    and modern CSS techniques.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">HTML / CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Tailwind</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">React</span>
+                </div>
+
+                <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-100">
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                        <span>📍</span> Phnom Penh
+                    </div>
+                    <button
+                        class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
+                        View portfolio
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col
+                    transition-all duration-300 ease-in-out
+                    hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-start gap-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9XIg1S6fleoUpItfeyXw5UXzK7lK2dIA3Iv4ZqIznOQ&s=10"
+                        alt="Rithy Vann" class="w-14 h-14 rounded-xl object-cover bg-amber-200">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Rithy Vann</h3>
+                        <p class="text-blue-600 text-sm font-medium">IT Student & Backend Developer</p>
+                        <p class="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                            <span>🎓</span> Royal University of Phnom Penh
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed">
+                    Passionate about backend systems and APIs. Currently learning Node.js, Express, and database design
+                    to build scalable applications.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Python</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Node.js</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">MongoDB</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Express</span>
+                </div>
+
+                <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-100">
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                        <span>📍</span> Phnom Penh
+                    </div>
+                    <button
+                        class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
+                        View portfolio
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col
+                    transition-all duration-300 ease-in-out
+                    hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-start gap-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM2-MOc9GEX9Xm0b-_i82ANHouYvvy4hrZRwjg_L6W5w&s=10"
+                        alt="Sreypov Lim" class="w-14 h-14 rounded-xl object-cover bg-amber-200">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Sreypov Lim</h3>
+                        <p class="text-blue-600 text-sm font-medium">IT Student & UI/UX Designer</p>
+                        <p class="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                            <span>🎓</span> Royal University of Phnom Penh
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed">
+                    Combines design and code. Focused on creating intuitive user experiences and turning designs into
+                    clean, accessible interfaces.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Figma</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">HTML / CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">React</span>
+                </div>
+
+                <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-100">
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                        <span>📍</span> Phnom Penh
+                    </div>
+                    <button
+                        class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
+                        View portfolio
+                    </button>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col
+                    transition-all duration-300 ease-in-out
+                    hover:-translate-y-2 hover:shadow-xl">
+                <div class="flex items-start gap-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4zO0deqi7qCTBBARyNCfxo4yttR5ezLuUOR9_55sCQ&s=10"
+                        alt="Dara Kim" class="w-14 h-14 rounded-xl object-cover bg-amber-200">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Dara Kim</h3>
+                        <p class="text-blue-600 text-sm font-medium">IT Student & Full-Stack Developer</p>
+                        <p class="text-gray-500 text-sm mt-1 flex items-center gap-1">
+                            <span>🎓</span> Royal University of Phnom Penh
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-sm mt-4 leading-relaxed">
+                    3rd-year student building end-to-end web applications. Enjoys working with both frontend and backend
+                    technologies to create complete solutions.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">React</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Node.js</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">Python</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">PostgreSQL</span>
+                </div>
+
+                <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-100">
+                    <div class="flex items-center gap-1 text-gray-500 text-sm">
+                        <span>📍</span> Phnom Penh
+                    </div>
+                    <button
+                        class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
+                        View portfolio
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="bg-[#0F172A] text-white px-12 py-12">
+        <div class="flex flex-row justify-around gap-12 mb-28">
+            <div class="w-72 flex-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
+                        alt="Student Portfolio Logo" />
+                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
+                        Portfolio </h1>
+                </div>
+                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and beginners
+                    in tech.</p>
+            </div>
+
+            <!-- Quick links -->
+
+            <div class="flex-1 flex flex-col gap-3">
+                <h3 class="">Quick links</h3>
+                <div class="text-gray-400 text-sm flex flex-col gap-2">
+                    <a href="" class="hover:text-white duration-200">Home</a>
+                    <a href="" class="hover:text-white duration-200">students</a>
+                    <a href="" class="hover:text-white duration-200">Project</a>
+                    <a href="" class="hover:text-white duration-200">Create portfolio</a>
+                </div>
+            </div>
+
+            <!-- Project categories -->
+
+            <div class="flex-1 flex flex-col gap-3 ">
+                <h3>Project categories</h3>
+                <div class=" text-gray-400 text-sm flex flex-col gap-2">
+                    <a href="" class="hover:text-white duration-200">Web Development</a>
+                    <a href="" class="hover:text-white duration-200">Python & Data Science</a>
+                    <a href="" class="hover:text-white duration-200">Mobile Applications</a>
+                    <a href="" class="hover:text-white duration-200">UI/UX Design</a>
+                </div>
+            </div>
+
+            <!-- Connect -->
+
+            <div class="flex-1 flex flex-col gap-3">
+                <h3>Connect</h3>
+                <p class="text-sm text-gray-400">Helping the next generation of <br> software engineers and creators get
+                    noticed.</p>
+                <div class="flex gap-8">
+
+                    <!-- github -->
+
+                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <!-- Linked in -->
+
+                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- Twitter -->
+
+                    <a href="https://x.com/giimin4awr">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <!-- Email -->
+
+                    <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-gray-700 mb-6">
+
+        <div class="text-sm text-gray-400 flex flex-row justify-between">
+            <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
+            <div class="flex flex-row gap-6">
+                <a href="" class="hover:text-white duration-200">Privacy policy</a>
+                <a href="" class="hover:text-white duration-200">Terms of service</a>
+                <a href="" class="hover:text-white duration-200">Student guidelines</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+
+    // Mobile menu
+
+    const menuBtn =
+        document.getElementById("mobile-menu-btn");
+
+    const mobileMenu =
+        document.getElementById("mobile-menu");
+
+    const menuIcon =
+        document.getElementById("menu-icon");
+
+
+    menuBtn.addEventListener("click", function () {
+
+        mobileMenu.classList.toggle("hidden");
+
+
+        if (mobileMenu.classList.contains("hidden")) {
+
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open menu");
+
+        } else {
+
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+            menuBtn.setAttribute("aria-expanded", "true");
+            menuBtn.setAttribute("aria-label", "Close menu");
+
+        }
+
+    });
+
+
+
+    // Show / Hide Password
+
+    const password =
+        document.getElementById("password");
+
+    const showPassword =
+        document.getElementById("showPassword");
+
+
+    showPassword.addEventListener("click", function () {
+
+        if (password.type === "password") {
+
+            password.type = "text";
+
+            showPassword.innerHTML =
+                '<i class="fa-regular fa-eye-slash"></i>';
+
+        } else {
+
+            password.type = "password";
+
+            showPassword.innerHTML =
+                '<i class="fa-regular fa-eye"></i>';
+
+        }
+
+    });
+
+</script>
+
+</html>
