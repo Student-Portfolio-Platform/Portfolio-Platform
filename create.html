@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Student Portfolio Platform" />
+    <meta property="og:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Student Portfolio Platform" />
+    <meta name="twitter:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <title>Student Portfolio Platform | Discover IT Talent</title>
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/png" href="images/image copy.png" classs="rounded-2xl" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 1. Embed the Google Font Link -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#F8FAFC]">
+    <script type="module" src="./src/create-portfolio.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    <!-- Navbar -->
+    <header class="bg-white border-b border-gray-100 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
+
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-3">
+                <img class="w-12 h-12 sm:w-16 sm:h-16 object-contain" src="./images/logo.png"
+                    alt="Student Portfolio Logo" />
+                <h1 class="text-[#2563EB] font-bold text-base sm:text-xl tracking-tight"> Student Portfolio </h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8 font-medium text-gray-600">
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./index.html"> Home </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Students </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./projects.html"> Projects </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="create-portfolio.html"> Create
+                            Portfolio </a> </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA / Auth Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
+                    href="#">
+                    <i class="fa-regular fa-user mr-2"></i> Login
+                </a>
+                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors hover:-translate-y-1 transition-all duration-300"
+                    href="#">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" aria-expanded="false"
+                class="md:hidden text-slate-600 hover:text-[#2563EB] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition"
+                aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default using 'hidden') -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <nav class="px-4 py-5">
+
+                <!-- Links -->
+                <div class="flex flex-col gap-1">
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-house mr-3 w-5"></i> Home
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-users mr-3 w-5"></i> Students
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
+                    </a>
+                </div>
+
+                <!-- Mobile Buttons -->
+                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="#"
+                        class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
+                        <i class="fa-regular fa-user mr-2"></i> Login
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Get Started
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <!-- section -->
+        <div class="flex flex-col justify-center items-center p-4 gap-4">
+            <div
+                class="flex gap-4 bg-[#F5F3FF] w-auto px-4 py-1 text-center text-blue-800 font-bold rounded-2xl justify-center items-center">
+                <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                <h3 class="">Porfolio Builder</h3>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-center">Build Your Portfolio</h1>
+            <p class="w-full max-w-xl px-2 text-center text-[#64748B] text-sm sm:text-base">Fill out the simple form
+                below to generate your professional
+                online portfolio instantly</p>
+        </div>
+        <!-- Personal Information -->
+        <section class="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-[100px] 2xl:px-[200px]">
+            <div class="bg-white p-4 sm:p-6 rounded-3xl pb-4 mb-16 sm:mb-24 md:mb-36">
+                <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
+                    <h1
+                        class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
+                        1</h1>
+                    <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Personal Information</h1>
+                </div>
+                <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
+                <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
+                    <!-- Top Divider Line -->
+
+                    <!-- Row 1: Name & Title -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full mt-2">
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">full
+                                name</label>
+                            <input type="text" placeholder="e.g. Yasmin Toyeb"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                        <div class="flex-1 w-full">
+                            <label
+                                class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Professional
+                                Title</label>
+                            <input type="text" placeholder="e.g. IT Student & Web Developer"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Email & Phone -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">email
+                                address</label>
+                            <input type="email" placeholder="e.g. yasmintoyeb1756@gmail.com"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">phone
+                                number</label>
+                            <input type="tel" placeholder="e.g. +885 96 781 2289"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Short Bio / About Me (Spans Full Width) -->
+                    <div class="w-full">
+                        <label for="bio"
+                            class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">short bio / about
+                            me</label>
+                        <textarea id="bio"
+                            placeholder="Write a short introduction about your teaching passions, background, and goals..."
+                            rows="3"
+                            class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150 resize-y"></textarea>
+                    </div>
+                </form>
+                <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
+                    <h1
+                        class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
+                        2</h1>
+                    <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Education Details</h1>
+                </div>
+                <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
+                <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
+
+                    <!-- Row 2: Email & Phone -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">univerxity
+                                / school</label>
+                            <input type="email" placeholder="e.g. PNC University..."
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">major /
+                                field of study</label>
+                            <input type="tel" placeholder="e.g. Information Technology"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">graduation
+                                / year</label>
+                            <input type="tel" placeholder="e.g. 2026 - 2029 (Year 1)"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                    </div>
+                </form>
+                <div class="gap-4 ml-2 sm:ml-6 mb-2 mt-4 mr-2 sm:mr-6">
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-3 sm:gap-0">
+                        <div class="flex gap-3 sm:gap-4">
+                            <h1
+                                class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
+                                3</h1>
+                            <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Skills &
+                                expertise</h1>
+                        </div>
+                        <button type="button" onclick="addNewRow()"
+                            class="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg text-sm font-medium hover:bg-blue-50 transition cursor-pointer self-start sm:self-auto">
+                            + Add New Skill
+                        </button>
+                    </div>
+                    <div class="border-t border-gray-300 w-full max-w-4xl mx-auto mt-2"></div>
+                </div>
+
+                <!-- Form Container -->
+                <form id="skillsForm" class="space-y-4 px-2 sm:px-6 mt-6">
+                    <!-- Row Container -->
+                    <div id="skillsContainer" class="space-y-4">
+
+                        <!-- Initial Row Example 1 -->
+                        <div class="flex items-center gap-2 sm:gap-3 input-row">
+                            <input type="text" value="HTML / CSS" placeholder="Skill name"
+                                class="min-w-0 flex-1 px-3 sm:px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-gray-700 transition">
+
+                            <div class="w-16 sm:w-24 shrink-0 relative">
+                                <input type="number" value="90" min="1" max="100"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-center text-gray-700 transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                                <!-- Custom Up/Down Arrows -->
+                                <div
+                                    class="absolute right-2 top-0 bottom-0 flex flex-col justify-center pointer-events-none text-gray-400 text-xs">
+                                    <span
+                                        class="cursor-pointer hover:text-gray-600 select-none pointer-events-auto leading-none mb-0.5"
+                                        onclick="stepNumber(this, 1)">▲</span>
+                                    <span
+                                        class="cursor-pointer hover:text-gray-600 select-none pointer-events-auto leading-none mt-0.5"
+                                        onclick="stepNumber(this, -1)">▼</span>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="deleteRow(this)"
+                                class="p-2 sm:p-3 shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Initial Row Example 2 -->
+                        <div class="flex items-center gap-2 sm:gap-3 input-row">
+                            <input type="text" value="JavaScript" placeholder="Skill name"
+                                class="min-w-0 flex-1 px-3 sm:px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-gray-700 transition">
+
+                            <div class="w-16 sm:w-24 shrink-0 relative">
+                                <input type="number" value="85" min="1" max="100"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-center text-gray-700 transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                                <div
+                                    class="absolute right-2 top-0 bottom-0 flex flex-col justify-center pointer-events-none text-gray-400 text-xs">
+                                    <span
+                                        class="cursor-pointer hover:text-gray-600 select-none pointer-events-auto leading-none mb-0.5"
+                                        onclick="stepNumber(this, 1)">▲</span>
+                                    <span
+                                        class="cursor-pointer hover:text-gray-600 select-none pointer-events-auto leading-none mt-0.5"
+                                        onclick="stepNumber(this, -1)">▼</span>
+                                </div>
+                            </div>
+
+                            <button type="button" onclick="deleteRow(this)"
+                                class="p-2 sm:p-3 shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="pt-4 flex justify-between items-center">
+                        <div></div>
+                        <button type="submit"
+                            class="px-6 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition cursor-pointer">
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+                <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
+                    <h1
+                        class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
+                        4</h1>
+                    <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Main Project</h1>
+                </div>
+                <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
+                <div class="bg-[#F8FAFC] px-3 sm:px-6 mx-2 sm:mx-6 rounded-2xl mt-2">
+                    <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
+                        <!-- Top Divider Line -->
+
+                        <!-- Row 1: Name & Title -->
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full mt-2">
+                            <div class="flex-1 w-full">
+                                <label
+                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Project
+                                    name</label>
+                                <input type="text" placeholder="e.g. Campus event Finder"
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            </div>
+                            <div class="flex-1 w-full">
+                                <label
+                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">category
+                                </label>
+                                <select
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 placeholder:normal-case transition-all duration-150">
+                                    <option value="">Web Development</option>
+                                    <option value="">Mobile App</option>
+                                    <option value="">UI/UX Design</option>
+                                    <option value="">Python / AI</option>
+                                    <option value="">LoT</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Email & Phone -->
+                        <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
+                            <div class="flex-1 w-full">
+                                <label
+                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">technologies
+                                    used</label>
+                                <input type="email" placeholder="e.g. React, Node.js, Tailwind"
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            </div>
+                            <div class="flex-1 w-full">
+                                <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">github
+                                    / demo link</label>
+                                <input type="tel" placeholder="https://github.com..."
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Short Bio / About Me (Spans Full Width) -->
+                        <div class="w-full">
+                            <label for="bio"
+                                class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">project
+                                description</label>
+                            <textarea id="bio" placeholder="Describe key features, challenges solved, and results..."
+                                rows="3"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150 resize-y"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
+                    <h1
+                        class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
+                        4</h1>
+                    <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Achievements &
+                        Certificates</h1>
+                </div>
+                <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
+                <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">award /
+                                certificate title</label>
+                            <input type="email" placeholder="e.g. 1st Place National hackathon"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                        <div class="flex-1 w-full">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">issuer /
+                                event</label>
+                            <input type="tel" placeholder="e.g. Ministry of Telecom $ IT"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                        </div>
+                    </div>
+                </form>
+                <div class="border-t border-gray-300 w-full max-w-4xl mx-auto my-4"></div>
+                <div class="flex flex-col sm:flex-row justify-between gap-4 px-2 sm:px-6">
+                    <button></button>
+                    <button class="flex flex-col sm:flex-row gap-3 sm:gap-4 font-bold w-full sm:w-auto">
+                        <div
+                            class="bg-gray-100 rounded-xl hover:bg-gray-200 flex justify-center items-center gap-4 p-2 sm:p-3">
+                            <i class="fa-solid fa-eye"></i>
+                            <h1>Quick Preview</h1>
+                        </div>
+                        <div
+                            class="bg-gradient-to-r from-[#2b61f6] to-[#8031f4] rounded-xl flex justify-center items-center gap-4 p-2 sm:p-3 hover:-translate-y-1 duration-300 text-white">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <h1 class="text-sm sm:text-base">Save & Publish Portfolio</h1>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-black text-white px-4 sm:px-8 md:px-16 py-8 sm:py-12">
+        <div class="flex flex-col md:flex-row justify-around gap-8 md:gap-12 mb-12 md:mb-28">
+            <div class="w-full md:w-72 flex-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
+                        alt="Student Portfolio Logo" />
+                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
+                        Portfolio </h1>
+                </div>
+                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and
+                    beginners
+                    in tech.</p>
+            </div>
+
+            <!-- Quick links -->
+            <div class="flex-1 flex flex-col gap-3">
+                <h3 class="">Quick links</h3>
+                <div class="text-gray-400 flex flex-col text-sm gap-2">
+                    <a href="" class="hover:text-white duration-200">Home</a>
+                    <a href="" class="hover:text-white duration-200">students</a>
+                    <a href="" class="hover:text-white duration-200">Project</a>
+                    <a href="" class="hover:text-white duration-200">Create portfolio</a>
+                </div>
+            </div>
+
+            <!-- Project categories -->
+            <div class="flex-1 flex flex-col gap-3">
+                <h3>Project categories</h3>
+                <div class="flex flex-col text-gray-400 text-sm gap-2">
+                    <a href="" class="hover:text-white duration-200">Web Development</a>
+                    <a href="" class="hover:text-white duration-200">Python & Data Science</a>
+                    <a href="" class="hover:text-white duration-200">Mobile Applications</a>
+                    <a href="" class="hover:text-white duration-200">UI/UX Design</a>
+                </div>
+            </div>
+
+            <!-- Connect -->
+            <div class="flex-1 flex flex-col gap-3">
+                <h3>Connect</h3>
+                <p class="text-sm text-gray-400">Helping the next generation of <br class="hidden sm:block"> software
+                    engineers and creators
+                    get
+                    noticed.</p>
+                <div class="flex gap-6 sm:gap-8">
+                    <!-- github -->
+                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <!-- Linked in -->
+                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://x.com/giimin4awr"
+                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <!-- Email -->
+                    <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act"
+                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-gray-700 mb-6">
+
+        <div
+            class="text-sm text-gray-400 flex flex-col sm:flex-row justify-between gap-4 items-center text-center sm:text-left">
+            <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+                <a href="" class="hover:text-white duration-200">Privacy policy</a>
+                <a href="" class="hover:text-white duration-200">Terms of service</a>
+                <a href="" class="hover:text-white duration-200">Student guidelines</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+
+    function addNewRow() {
+        const skillsContainer = document.getElementById("skillsContainer");
+        const newRow = skillsContainer.querySelector(".input-row").cloneNode(true);
+        const skillInput = newRow.querySelector('input[type="text"]');
+        const levelInput = newRow.querySelector('input[type="number"]');
+
+        skillInput.value = "";
+        levelInput.value = "1";
+        skillsContainer.appendChild(newRow);
+        skillInput.focus();
+    }
+
+    function deleteRow(button) {
+        button.closest(".input-row").remove();
+    }
+
+    function stepNumber(control, amount) {
+        const levelInput = control.closest(".relative").querySelector('input[type="number"]');
+        const currentValue = Number(levelInput.value) || 1;
+        levelInput.value = Math.min(100, Math.max(1, currentValue + amount));
+    }
+
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+
+    // Open / Close menu
+    menuBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("hidden");
+
+        if (mobileMenu.classList.contains("hidden")) {
+
+            // Menu closed
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+
+            menuBtn.setAttribute("aria-expanded", "false");
+
+        } else {
+
+            // Menu opened
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+
+            menuBtn.setAttribute("aria-expanded", "true");
+        }
+
+    });
+
+
+    // Close menu after clicking a link
+    mobileLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.add("hidden");
+
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+
+            menuBtn.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+</script>
+
+</html>
