@@ -19,7 +19,7 @@
         content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
     <title>Student Portfolio Platform | Discover IT Talent</title>
     <!-- Favicon Link -->
-    <link rel="icon" type="image/png" href="images/image copy.png" classs="rounded-2xl" />
+    <link rel="icon" type="image/png" href="./images/image copy.png" classs="rounded-2xl" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- 1. Embed the Google Font Link -->
@@ -58,7 +58,7 @@
                     href="#">
                     <i class="fa-regular fa-user mr-2"></i> Login
                 </a>
-                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors hover:-translate-y-1 transition-all duration-300"
+                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors hover:-translate-y-1 transition-all duration-700"
                     href="#">
                     Get Started
                 </a>
@@ -162,7 +162,7 @@
     <!-- Search Students Section -->
     <div class="min-h-screen bg-white pt-4">
         <div class="px-4 sm:px-6 lg:px-16 mb-8">
-            <form class="flex flex-col md:flex-row bg-white shadow-2xl rounded-2xl">
+            <form class="flex flex-col md:flex-row bg-white shadow-xl rounded-2xl">
                 <div class="p-4 sm:p-6 flex-1 relative flex items-center">
                     <i class="fa-solid fa-magnifying-glass absolute left-9 text-gray-400 pointer-events-none"></i>
                     <input type="text"
@@ -181,8 +181,7 @@
                     </select>
                 </div>
                 <button class="p-4 md:p-6 md:pl-0 md:self-center">
-                    <div
-                        class="bg-blue-600 p-2 px-4 text-white font-bold rounded-md hover:-translate-y-1 duration-300">
+                    <div class="bg-blue-600 p-2 px-4 text-white font-bold rounded-md hover:-translate-y-1 duration-300">
                         <i class="fa-solid fa-magnifying-glass mr-2"></i>
                         <span>Search</span>
                     </div>
@@ -190,7 +189,27 @@
             </form>
         </div>
         <!-- Card -->
-        <div class="flex flex-col md:flex-row px-4 sm:px-6 lg:px-16 gap-8">
+        <section class="w-full px-4 sm:px-6 lg:px-16 lg:p-12 lg:gap-4">
+            <div class="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h2 class="mb- text-2xl font-bold leading-tight text-[#071F41] sm:text-[38px]">
+                        Featured Students
+                    </h2>
+
+                    <p class="text-base font-normal leading-[1.4] text-[#5D7B9E] sm:text-xl lg:text-[18px]">
+                        Discover top performing student talent showcasing their portfolios
+                    </p>
+                </div>
+
+                <a href="#"
+                    class="flex items-center gap-2 text-base font-semibold text-[#2864E8] transition-colors hover:text-[#174BBd] sm:text-lg lg:text-[20px] hover:translate-x-1 duration-300">
+                    <span>View All Students</span>
+                    <span class="text-[28px] leading-none">→</span>
+                </a>
+            </div>
+        </section>
+        <div class="mt-6 flex flex-col px-4 sm:px-6 lg:px-16 gap-8 md:flex-row sm:mt-8 pb-12">
+
             <!-- Card 1 -->
             <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col
                     transition-all duration-300 ease-in-out
@@ -313,7 +332,7 @@
     </div>
     <!-- Popular Skills Section -->
     <div class="">
-        <div class="min-h-[40vh] px-4 py-12 flex flex-col justify-center items-center gap-4 text-center">
+        <div class="min-h-[40vh] px-4 py-12 flex flex-col justify-center items-center gap-4 text-center border border-gray-300 mt-8 bg-[#F3F7FA]">
             <h1 class="text-3xl sm:text-4xl font-bold">Popular Tech Stack & Skills</h1>
             <p class="text-base sm:text-xl">Explore portfolios filtered by in-demand tech stacks</p>
             <!-- Skill -->
@@ -362,17 +381,26 @@
         </div>
     </div>
     <!-- Project -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-10">
-        <div class="flex flex-col gap-4">
-            <h1 class="text-3xl font-bold">Latest Projects</h1>
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <p class="text-[#999CA6]">Innovative apps, websites, and research built by students</p>
-                <span class="flex items-center gap-4 hover:translate-x-1 duration-300">
-                    <h3 class="text-lg sm:text-xl text-blue-500 font-bold">Explore All Projects</h3>
-                    <i class="fa-solid fa-hand-point-right text-blue-800 "></i>
-                </span>
+    <section class="w-full px-4 sm:px-6 lg:px-16 lg:p-12 lg:gap-4">
+        <div class="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+                <h2 class="mb- text-2xl font-bold leading-tight text-[#071F41] sm:text-[38px]">
+                    Latest Projects
+                </h2>
+
+                <p class="text-base font-normal leading-[1.4] text-[#5D7B9E] sm:text-xl lg:text-[18px]">
+                    Innovative apps, websites, and research built by students
+                </p>
             </div>
+
+            <a href="#"
+                class="flex items-center gap-2 text-base font-semibold text-[#2864E8] transition-colors hover:text-[#174BBd] sm:text-lg lg:text-[20px] hover:translate-x-1 duration-300">
+                <span>View All Students</span>
+                <span class="text-[28px] leading-none">→</span>
+            </a>
         </div>
+    </section>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 ">
 
         <!-- PROJECTS 1  -->
 
@@ -558,8 +586,10 @@
         <!-- Call-to-Action Section -->
         <div class="my-10 bg-gradient-to-r from-[#2D5FEB] to-[#7040ED] min-h-[50vh] rounded-3xl">
             <div class="p-6 sm:p-10 w-full sm:w-[68%] gap-4 flex flex-col">
-                <h1 class="text-2xl sm:text-4xl font-bold text-white">Ready to showcase your journey to potential employers?</h1>
-                <p class="text-base sm:text-xl text-gray-50">Join thousands of IT and university students who have elevated their
+                <h1 class="text-2xl sm:text-4xl font-bold text-white">Ready to showcase your journey to potential
+                    employers?</h1>
+                <p class="text-base sm:text-xl text-gray-50">Join thousands of IT and university students who have
+                    elevated their
                     careers
                     with EduFolio. Free, fast, and
                     recruiter-friendly.</p>
@@ -585,7 +615,8 @@
                     <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
                         Portfolio </h1>
                 </div>
-                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and beginners in tech.</p>
+                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and beginners
+                    in tech.</p>
             </div>
 
             <!-- Quick links -->
