@@ -1,0 +1,524 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[#EEF2FB]">
+    <script type="module" src="/src/main.ts"></script>
+    <header class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
+
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-3">
+                <img class="w-16 h-16 object-contain" src="./images/logo.png" alt="Student Portfolio Logo" />
+                <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> Student Portfolio </h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-8 font-medium text-gray-600">
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Home </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Students </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Projects </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Create Portfolio </a> </li>
+                </ul>
+            </nav>
+
+            <!-- Desktop CTA / Auth Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
+                    href="#">
+                    <i class="fa-regular fa-user mr-2"></i> Login
+                </a>
+                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    href="#">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                class="md:hidden text-slate-600 hover:text-[#2563EB] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition"
+                aria-label="Open menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default using 'hidden') -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <nav class="px-4 py-5">
+
+                <!-- Links -->
+                <div class="flex flex-col gap-1">
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-house mr-3 w-5"></i> Home
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-users mr-3 w-5"></i> Students
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
+                    </a>
+                    <a href="#"
+                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
+                        <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
+                    </a>
+                </div>
+
+                <!-- Mobile Buttons -->
+                <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
+                    <a href="#"
+                        class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
+                        <i class="fa-regular fa-user mr-2"></i> Login
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        Get Started
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Profile header -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 mt-3">
+        <a href="" class="hover:text-blue-600">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to student directory
+        </a>
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-card overflow-hidden mb-8
+                mt-3
+                bg-[linear-gradient(to_bottom,#6047EC_0%,#6047EC_50%,#FFFFFF_50%,#FFFFFF_100%)]">
+            <div class="h-32 sm:h-44 gradient-bg relative">
+                <span
+                    class="absolute top-4 right-4 px-3 py-1 bg-white/20 text-white rounded-full text-xs font-semibold backdrop-blur-sm">Available
+                    for hiring
+                </span>
+            </div>
+            <div class="px-6 sm:px-10 pb-8 relative">
+                <div
+                    class="flex flex-col sm:flex-row items-center sm:items-end justify-between -mt-14 sm:-mt-16 mb-6 gap-4">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-end gap-5 text-center sm:text-left">
+                        <div id="port-avatar-box"
+                            class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl border-4 border-white shadow-lg bg-white overflow-hidden shrink-0">
+                            <img src="/images/thida.jpg" alt="">
+                        </div>
+                        <div class="mb-1">
+                            <h1 id="port-name" class="font-display text-2xl sm:text-3xl font-extrabold">Onchu Thida
+                            </h1>
+                            <p id="port-title" class="text-blue-700 font-medium text-base sm:text-lg">IT Student & Web
+                                Developer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button type="button" id="contact-btn"
+                            class="px-5 py-2.5 bg-blue-600 rounded-xl font-semibold text-white gradient-bg shadow-md text-sm inline-flex items-center gap-2 hover:brightness-105 transition">
+                            <i class="fa-regular fa-paper-plane"></i> Contact
+                        </button>
+                        <button type="button" id="share-btn"
+                            class="p-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100"
+                            aria-label="Copy portfolio link">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1.5 text-sm text-slate-600 pt-4 border-t border-slate-100">
+                    <span class="flex items-center gap-1.5"><i
+                            class="fa-solid fa-building-columns text-blue-600"></i><span id="port-university">
+                        </span>Royal University of Phnom Penh</span>
+
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-bookmark text-blue-600"></i>
+                        <span id="port-major">Web Development</span></span>
+
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-blue-600"></i><span
+                            id="port-location">
+                        </span>Phnom Penh, Cambodia</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- sidebar -->
+    <div class="ax-w-7xl mx-auto px-4 sm:px-6 lg:px-16 mt-3 flex flex-col lg:flex-row gap-8">
+        <!-- Left Column  -->
+        <div class="flex flex-col gap-8 lg:w-1/3">
+            <!-- about  -->
+            <div class="bg-white p-7 w-full rounded-2xl shadow shadow-gray-400">
+                <h2 class="text-xl"> <i class="fa-regular fa-user text-blue-600 mr-2 mb-2"></i><b>About</b>
+                </h2>
+                <p>Passionate 3rd-year IT student focused on full-stack web development and clean UI/UX designs. Eager
+                    to
+                    solve real-world problems through modern web technologies.</p>
+            </div>
+            <!-- Skills -->
+            <div class="bg-white p-7 w-full rounded-2xl shadow shadow-gray-400">
+                <h2 class="text-xl mb-6 flex items-center">
+                    <i class="fa-solid fa-code text-blue-600 mr-2"></i>
+                    <b>Skills</b>
+                </h2>
+
+                <div id="port-skills-list" class="space-y-4"></div>
+            </div>
+            <!-- Script  -->
+            <script>
+                const skills = [
+                    { name: "HTML / CSS", level: 97 },
+                    { name: "JavaScript", level: 70 },
+                    { name: "Python", level: 87 },
+                    { name: "React", level: 85 },
+                    { name: "UI/UX Design", level: 77 },
+                ];
+
+                const skillsList = document.getElementById("port-skills-list");
+
+                skills.forEach(skill => {
+                    skillsList.innerHTML += `
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="font-semibold text-gray-800">${skill.name}</span>
+                    <span class="font-semibold text-indigo-600">${skill.level}%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div class="h-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600"
+                         style="width: ${skill.level}%"></div>
+                </div>
+            </div>
+        `;
+                });
+            </script>
+            <!-- Social Links -->
+            <div class="bg-white p-7 w-full rounded-2xl shadow shadow-gray-400">
+                <h2 class="text-xl mb-6 flex items-center">
+                    <i class="fa-solid fa-link text-blue-600 mr-2"></i>
+                    <b>Social Links</b>
+                </h2>
+                <div class="space-y-3">
+                    <a href="#" class="flex items-center gap-3 bg-gray-200 px-6 py-2 rounded-2xl font-bold text-gray-700 hover:bg-blue-200 transition
+                                        transition-all duration-300 ease-in-out
+                                        hover:-translate-y-2 hover:shadow-xl">
+                        <i class="fa-brands fa-github text-lg w-5"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 bg-gray-200 px-6 py-2 rounded-2xl font-bold text-blue-700 hover:bg-blue-200 transition
+                                        transition-all duration-300 ease-in-out
+                                        hover:-translate-y-2 hover:shadow-xl">
+                        <i class="fa-brands fa-linkedin-in text-lg w-5"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 bg-gray-200 px-6 py-2 rounded-2xl font-bold text-gray-700 hover:bg-blue-200 transition
+                                        transition-all duration-300 ease-in-out
+                                        hover:-translate-y-2 hover:shadow-xl">
+                        <i class="fa-brands fa-twitter text-lg w-5"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- right Columns  -->
+        <div class="lg:w-2/3">
+            <!-- Educations -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card shadow shadow-gray-400">
+                <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Education
+                </h2>
+                <h4 class="font-bold pl-11">Bachelor of Science in Information Technology</h4>
+                <div class="flex pl-11">
+                    <p class="text-blue-600">Royal University of Phnom Penh</p>
+                    <p>· 2023 - 2027 (Expected)</p>
+                </div>
+                <p class="pl-11">Specializing in Web & Software Engineering. Top 5% of class.</p>
+            </div>
+            <!-- Projects  -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-card mt-6">
+                <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i
+                        class="fa-solid fa-folder-open text-blue-600"></i> Projects</h2>
+                <div id="port-projects-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+                <div class="flex flex-row gap-8">
+                    <!-- Web Development -->
+                    <div class="bg-white rounded-2xl border border-blue-200 shadow-lg shadow-blue-100/60 overflow-hidden
+                            transition-all duration-300 ease-in-out
+                            hover:-translate-y-2 hover:shadow-xl">
+                        <!-- Image + category badge -->
+                        <div class="relative">
+                            <img src="data:image/jpeg;base64,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"
+                                alt="CampusConnect Platform" class="w-full h-56 object-cover">
+                            <span
+                                class="absolute top-4 left-4 px-4 py-1.5 bg-white/90 text-gray-900 text-sm font-semibold rounded-full">
+                                Web Development
+                            </span>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="p-6">
+                            <a href="" class="text-sm font-bold text-blue-700 hover:underline">By Onchu Thida</a>
+                            <h3 class="mt-3 text-2xl font-bold text-gray-900">CampusConnect Platform</h3>
+                            <p class="mt-3 text-gray-500 text-lg leading-relaxed line-clamp-2">
+                                A collaborative student directory and study group finder built with
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">HTML</span>
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">Tailwind
+                                    CSS</span>
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">JavaScript</span>
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">Firebase</span>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="flex items-center justify-between px-6 py-5 border-t border-gray-100">
+                            <a href="" class="flex items-center gap-2 font-semibold text-gray-700 hover:text-blue-600">
+                                <i class="fa-regular fa-eye text-lg"></i> Details
+                            </a>
+                            <div class="flex items-center gap-4 text-gray-600 text-xl">
+                                <a href="" class="hover:text-blue-600"><i class="fa-brands fa-github"></i></a>
+                                <a href="" class="hover:text-blue-600"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- UX/UI Design -->
+                    <div class="bg-white rounded-2xl border border-blue-200 shadow-lg shadow-blue-100/60 overflow-hidden
+                                transition-all duration-300 ease-in-out
+                                hover:-translate-y-2 hover:shadow-xl">
+                        <!-- Image + category badge -->
+                        <div class="relative">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFGeYUtjWs3sR1ui6yz0HPJC1Ckb4wqvN3NIqe9yYYw&s=10"
+                                alt="CampusConnect Platform" class="w-full h-56 object-cover">
+                            <span
+                                class="absolute top-4 left-4 px-4 py-1.5 bg-white/90 text-gray-900 text-sm font-semibold rounded-full">
+                                TaskPulse Productivity App
+                            </span>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="p-6">
+                            <a href="" class="text-sm font-bold text-blue-700 hover:underline">By Onchu Thida</a>
+                            <h3 class="mt-3 text-2xl font-bold text-gray-900">TaskPulse Productivity App</h3>
+                            <p class="mt-3 text-gray-500 text-lg leading-relaxed line-clamp-2">
+                                ntuitive task management dashboard with interactive drag-
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">Tailwind
+                                    CSS</span>
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">JavaScript</span>
+                                <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-md">Firebase</span>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="flex items-center justify-between px-6 py-5 border-t border-gray-100">
+                            <a href="" class="flex items-center gap-2 font-semibold text-gray-700 hover:text-blue-600">
+                                <i class="fa-regular fa-eye text-lg"></i> Details
+                            </a>
+                            <div class="flex items-center gap-4 text-gray-600 text-xl">
+                                <a href="" class="hover:text-blue-600"><i class="fa-brands fa-github"></i></a>
+                                <a href="" class="hover:text-blue-600"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Achievements & certifications -->
+            <section class="bg-white rounded-3xl border border-gray-200 shadow-md p-8 my-8">
+                <h2 class="flex items-center gap-3 text-3xl font-bold text-gray-900">
+                    <i class="fa-solid fa-trophy text-amber-500"></i>
+                    Achievements &amp; certifications
+                </h2>
+
+                <div class="mt-6 space-y-5">
+                    <!-- Item 1 -->
+                    <div class="flex items-center gap-5 bg-gray-50 border border-gray-100 rounded-2xl px-5 py-6">
+                        <div
+                            class="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-amber-100 text-amber-600">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">1st Place - University Hackathon 2025</h3>
+                            <p class="text-gray-500">Issued by RUPP Tech Club (Nov 2025)</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-center gap-5 bg-gray-50 border border-gray-100 rounded-2xl px-5 py-6">
+                        <div
+                            class="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-amber-100 text-amber-600">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">Certified JavaScript Developer</h3>
+                            <p class="text-gray-500">Issued by FreeCodeCamp (Aug 2025)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+
+    <footer class="bg-[#0F172A] text-white px-12 py-12">
+        <div class="flex flex-row justify-around gap-12 mb-28">
+            <div class="w-72 flex-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
+                        alt="Student Portfolio Logo" />
+                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
+                        Portfolio </h1>
+                </div>
+                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and beginners
+                    in tech.</p>
+            </div>
+
+            <!-- Quick links -->
+
+            <div class="flex-1 flex flex-col gap-3">
+                <h3 class="">Quick links</h3>
+                <div class="text-gray-400 text-sm flex flex-col gap-2">
+                    <a href="" class="hover:text-white duration-200">Home</a>
+                    <a href="" class="hover:text-white duration-200">students</a>
+                    <a href="" class="hover:text-white duration-200">Project</a>
+                    <a href="" class="hover:text-white duration-200">Create portfolio</a>
+                </div>
+            </div>
+
+            <!-- Project categories -->
+
+            <div class="flex-1 flex flex-col gap-3 ">
+                <h3>Project categories</h3>
+                <div class=" text-gray-400 text-sm flex flex-col gap-2">
+                    <a href="" class="hover:text-white duration-200">Web Development</a>
+                    <a href="" class="hover:text-white duration-200">Python & Data Science</a>
+                    <a href="" class="hover:text-white duration-200">Mobile Applications</a>
+                    <a href="" class="hover:text-white duration-200">UI/UX Design</a>
+                </div>
+            </div>
+
+            <!-- Connect -->
+
+            <div class="flex-1 flex flex-col gap-3">
+                <h3>Connect</h3>
+                <p class="text-sm text-gray-400">Helping the next generation of <br> software engineers and creators get
+                    noticed.</p>
+                <div class="flex gap-8">
+
+                    <!-- github -->
+
+                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <!-- Linked in -->
+
+                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- Twitter -->
+
+                    <a href="https://x.com/giimin4awr">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <!-- Email -->
+
+                    <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-gray-700 mb-6">
+
+        <div class="text-sm text-gray-400 flex flex-row justify-between">
+            <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
+            <div class="flex flex-row gap-6">
+                <a href="" class="hover:text-white duration-200">Privacy policy</a>
+                <a href="" class="hover:text-white duration-200">Terms of service</a>
+                <a href="" class="hover:text-white duration-200">Student guidelines</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+
+    // Mobile menu
+
+    const menuBtn =
+        document.getElementById("mobile-menu-btn");
+
+    const mobileMenu =
+        document.getElementById("mobile-menu");
+
+    const menuIcon =
+        document.getElementById("menu-icon");
+
+
+    menuBtn.addEventListener("click", function () {
+
+        mobileMenu.classList.toggle("hidden");
+
+
+        if (mobileMenu.classList.contains("hidden")) {
+
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open menu");
+
+        } else {
+
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+            menuBtn.setAttribute("aria-expanded", "true");
+            menuBtn.setAttribute("aria-label", "Close menu");
+
+        }
+
+    });
+
+
+
+    // Show / Hide Password
+
+    const password =
+        document.getElementById("password");
+
+    const showPassword =
+        document.getElementById("showPassword");
+
+
+    showPassword.addEventListener("click", function () {
+
+        if (password.type === "password") {
+
+            password.type = "text";
+
+            showPassword.innerHTML =
+                '<i class="fa-regular fa-eye-slash"></i>';
+
+        } else {
+
+            password.type = "password";
+
+            showPassword.innerHTML =
+                '<i class="fa-regular fa-eye"></i>';
+
+        }
+
+    });
+
+</script>
+
+
+</html>
