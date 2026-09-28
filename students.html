@@ -2,12 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students Portfolio</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Student Portfolio Platform" />
+    <meta property="og:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Student Portfolio Platform" />
+    <meta name="twitter:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <title>Student Portfolio Platform | Discover IT Talent</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 1. Embed the Google Font Link -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-[#EEF2FB]">
@@ -24,21 +41,21 @@
             <!-- Desktop Navigation -->
             <nav class="hidden md:block">
                 <ul class="flex items-center gap-8 font-medium text-gray-600">
-                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Home </a> </li>
-                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Students </a> </li>
-                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Projects </a> </li>
-                    <li> <a class="hover:text-[#2563EB] transition-colors" href="#"> Create Portfolio </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./index.html"> Home </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./students.html"> Students </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./projects.html"> Projects </a> </li>
+                    <li> <a class="hover:text-[#2563EB] transition-colors" href="./create.html"> Create Portfolio </a> </li>
                 </ul>
             </nav>
 
             <!-- Desktop CTA / Auth Buttons -->
             <div class="hidden md:flex items-center gap-4">
                 <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
-                    href="#">
+                    href="./login.html">
                     <i class="fa-regular fa-user mr-2"></i> Login
                 </a>
                 <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                    href="#">
+                    href="./register.html">
                     Get Started
                 </a>
             </div>
@@ -57,19 +74,19 @@
 
                 <!-- Links -->
                 <div class="flex flex-col gap-1">
-                    <a href="#"
+                    <a href="./index.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-house mr-3 w-5"></i> Home
                     </a>
-                    <a href="#"
+                    <a href="./students.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-users mr-3 w-5"></i> Students
                     </a>
-                    <a href="#"
+                    <a href="./projects.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
                     </a>
-                    <a href="#"
+                    <a href="./create.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
                     </a>
@@ -77,11 +94,11 @@
 
                 <!-- Mobile Buttons -->
                 <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                    <a href="#"
+                    <a href="./login.html"
                         class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
                         <i class="fa-regular fa-user mr-2"></i> Login
                     </a>
-                    <a href="#"
+                    <a href="./register.html"
                         class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
                         Get Started
                     </a>
@@ -233,10 +250,10 @@
                     <div class="flex items-center gap-1 text-gray-500 text-sm">
                         <span>📍</span> Phnom Penh
                     </div>
-                    <button
+                    <a href="./personal-portfolio-Lyhov-Sin.html"
                         class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
                         View portfolio
-                    </button>
+                    </a>
                 </div>
             </article>
 
@@ -272,10 +289,10 @@
                     <div class="flex items-center gap-1 text-gray-500 text-sm">
                         <span>📍</span> Phnom Penh
                     </div>
-                    <button
+                    <a href="./personal-portfolio-Yasmin-toyeb.html"
                         class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
                         View portfolio
-                    </button>
+                    </a>
                 </div>
             </article>
 
@@ -311,10 +328,10 @@
                     <div class="flex items-center gap-1 text-gray-500 text-sm">
                         <span>📍</span> Phnom Penh
                     </div>
-                    <button
+                    <a href="./personal-portfolio-Onchu-Thida.html"
                         class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
                         View portfolio
-                    </button>
+                    </a>
                 </div>
             </article>
 
@@ -457,10 +474,12 @@
             <div class="flex-1 flex flex-col gap-3">
                 <h3 class="">Quick links</h3>
                 <div class="text-gray-400 text-sm flex flex-col gap-2">
-                    <a href="" class="hover:text-white duration-200">Home</a>
-                    <a href="" class="hover:text-white duration-200">students</a>
-                    <a href="" class="hover:text-white duration-200">Project</a>
-                    <a href="" class="hover:text-white duration-200">Create portfolio</a>
+                    <a href="./index.html" class="hover:text-white duration-200">Home</a>
+                    <a href="./students.html" class="hover:text-white duration-200">Students</a>
+                    <a href="./projects.html" class="hover:text-white duration-200">Projects</a>
+                    <a href="./create.html" class="hover:text-white duration-200">Create portfolio</a>
+                    <a href="./login.html" class="hover:text-white duration-200">Login</a>
+                    <a href="./register.html" class="hover:text-white duration-200">Register</a>
                 </div>
             </div>
 
@@ -469,10 +488,10 @@
             <div class="flex-1 flex flex-col gap-3 ">
                 <h3>Project categories</h3>
                 <div class=" text-gray-400 text-sm flex flex-col gap-2">
-                    <a href="" class="hover:text-white duration-200">Web Development</a>
-                    <a href="" class="hover:text-white duration-200">Python & Data Science</a>
-                    <a href="" class="hover:text-white duration-200">Mobile Applications</a>
-                    <a href="" class="hover:text-white duration-200">UI/UX Design</a>
+                    <a href="./projects.html" class="hover:text-white duration-200">Web Development</a>
+                    <a href="./projects.html" class="hover:text-white duration-200">Python &amp; Data Science</a>
+                    <a href="./projects.html" class="hover:text-white duration-200">Mobile Applications</a>
+                    <a href="./projects.html" class="hover:text-white duration-200">UI/UX Design</a>
                 </div>
             </div>
 
@@ -516,9 +535,9 @@
         <div class="text-sm text-gray-400 flex flex-row justify-between">
             <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
             <div class="flex flex-row gap-6">
-                <a href="" class="hover:text-white duration-200">Privacy policy</a>
-                <a href="" class="hover:text-white duration-200">Terms of service</a>
-                <a href="" class="hover:text-white duration-200">Student guidelines</a>
+                <span>Privacy policy</span>
+                <span>Terms of service</span>
+                <span>Student guidelines</span>
             </div>
         </div>
     </footer>
