@@ -18,55 +18,52 @@
     <meta name="twitter:description"
         content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
     <title>Student Portfolio Platform | Discover IT Talent</title>
-    <!-- Favicon Link -->
-    <link rel="icon" type="image/png" href="images/image copy.png" classs="rounded-2xl" />
+    <link rel="icon" type="image/png" href="images/image copy.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 1. Embed the Google Font Link -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-[#F8FAFC]">
-    <script type="module" src="./src/create-portfolio.js"></script>
-    <script type="module" src="/src/main.ts"></script>
     <!-- Navbar -->
     <header class="bg-white border-b border-gray-100 w-full">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
-
-            <!-- Logo & Title -->
             <div class="flex items-center gap-3">
                 <img class="w-12 h-12 sm:w-16 sm:h-16 object-contain" src="./images/logo.png"
                     alt="Student Portfolio Logo" />
                 <h1 class="text-[#2563EB] font-bold text-base sm:text-xl tracking-tight"> Student Portfolio </h1>
             </div>
 
-            <!-- Desktop Navigation -->
             <nav class="hidden md:block">
                 <ul class="flex items-center gap-8 font-medium text-gray-600">
+<<<<<<< HEAD
+                    <li><a class="hover:text-[#2563EB] transition-colors" href="./index.html">Home</a></li>
+                    <li><a class="hover:text-[#2563EB] transition-colors" href="./students.html">Students</a></li>
+                    <li><a class="hover:text-[#2563EB] transition-colors" href="./projects.html">Projects</a></li>
+                    <li><a class="hover:text-[#2563EB] transition-colors" href="./create.html">Create Portfolio</a></li>
+=======
                     <li> <a class="hover:text-[#2563EB] transition-colors" href="./index.html"> Home </a> </li>
                     <li> <a class="hover:text-[#2563EB] transition-colors" href="./students.html"> Students </a> </li>
                     <li> <a class="hover:text-[#2563EB] transition-colors" href="./projects.html"> Projects </a> </li>
                     <li> <a class="hover:text-[#2563EB] transition-colors" href="create-portfolio.html"> Create
                             Portfolio </a> </li>
+>>>>>>> 5b1692fa38c8e8fa9d72162b50f56d79d5a04b79
                 </ul>
             </nav>
 
-            <!-- Desktop CTA / Auth Buttons -->
             <div class="hidden md:flex items-center gap-4">
                 <a class="flex items-center hover:bg-[#EDF5FF] text-[#1A73E8] transition-colors px-5 py-2.5 border border-[#DADCE0] rounded-lg"
-                    href="#">
+                    href="./login.html">
                     <i class="fa-regular fa-user mr-2"></i> Login
                 </a>
                 <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors hover:-translate-y-1 transition-all duration-300"
-                    href="#">
+                    href="./register.html">
                     Get Started
                 </a>
             </div>
 
-            <!-- Mobile Hamburger Button -->
             <button id="mobile-menu-btn" aria-expanded="false"
                 class="md:hidden text-slate-600 hover:text-[#2563EB] focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition"
                 aria-label="Toggle menu">
@@ -74,37 +71,36 @@
             </button>
         </div>
 
-        <!-- Mobile Menu (Hidden by default using 'hidden') -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
             <nav class="px-4 py-5">
-
-                <!-- Links -->
                 <div class="flex flex-col gap-1">
+<<<<<<< HEAD
+                    <a href="./index.html"
+=======
                     <a href="./students.html"
+>>>>>>> 5b1692fa38c8e8fa9d72162b50f56d79d5a04b79
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-house mr-3 w-5"></i> Home
                     </a>
-                    <a href="#"
+                    <a href="./students.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-users mr-3 w-5"></i> Students
                     </a>
-                    <a href="#"
+                    <a href="./projects.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
                     </a>
-                    <a href="#"
+                    <a href="./create.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
                         <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
                     </a>
                 </div>
-
-                <!-- Mobile Buttons -->
                 <div class="mt-4 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                    <a href="#"
+                    <a href="./login.html"
                         class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF] transition">
                         <i class="fa-regular fa-user mr-2"></i> Login
                     </a>
-                    <a href="#"
+                    <a href="./create.html"
                         class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
                         Get Started
                     </a>
@@ -112,22 +108,26 @@
             </nav>
         </div>
     </header>
+
     <div>
-        <!-- section -->
+        <!-- Header Section -->
         <div class="flex flex-col justify-center items-center p-4 gap-4">
             <div
                 class="flex gap-4 bg-[#F5F3FF] w-auto px-4 py-1 text-center text-blue-800 font-bold rounded-2xl justify-center items-center">
                 <i class="fa-solid fa-circle text-xs text-blue-600"></i>
-                <h3 class="">Porfolio Builder</h3>
+                <h3>Portfolio Builder</h3>
             </div>
             <h1 class="text-2xl sm:text-3xl font-bold text-center">Build Your Portfolio</h1>
-            <p class="w-full max-w-xl px-2 text-center text-[#64748B] text-sm sm:text-base">Fill out the simple form
-                below to generate your professional
-                online portfolio instantly</p>
+            <p class="w-full max-w-xl px-2 text-center text-[#64748B] text-sm sm:text-base">
+                Fill out the simple form below to generate your professional online portfolio instantly
+            </p>
         </div>
-        <!-- Personal Information -->
+
+        <!-- Form Section -->
         <section class="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-[100px] 2xl:px-[200px]">
             <div class="bg-white p-4 sm:p-6 rounded-3xl pb-4 mb-16 sm:mb-24 md:mb-36">
+
+                <!-- 1. Personal Information -->
                 <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
                     <h1
                         class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
@@ -135,53 +135,51 @@
                     <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Personal Information</h1>
                 </div>
                 <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
-                <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
-                    <!-- Top Divider Line -->
 
-                    <!-- Row 1: Name & Title -->
+                <form id="personalForm"
+                    class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
                     <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full mt-2">
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">full
-                                name</label>
-                            <input type="text" placeholder="e.g. Yasmin Toyeb"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Full
+                                Name</label>
+                            <input type="text" name="fullName" placeholder="e.g. Yasmin Toyeb"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                         <div class="flex-1 w-full">
                             <label
                                 class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Professional
                                 Title</label>
-                            <input type="text" placeholder="e.g. IT Student & Web Developer"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <input type="text" name="title" placeholder="e.g. IT Student & Web Developer"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                     </div>
 
-                    <!-- Row 2: Email & Phone -->
                     <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">email
-                                address</label>
-                            <input type="email" placeholder="e.g. yasmintoyeb1756@gmail.com"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Email
+                                Address</label>
+                            <input type="email" name="email" placeholder="e.g. yasmintoyeb1756@gmail.com"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">phone
-                                number</label>
-                            <input type="tel" placeholder="e.g. +885 96 781 2289"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Phone
+                                Number</label>
+                            <input type="tel" name="phone" placeholder="e.g. +885 96 781 2289"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                     </div>
 
-                    <!-- Row 3: Short Bio / About Me (Spans Full Width) -->
                     <div class="w-full">
-                        <label for="bio"
-                            class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">short bio / about
-                            me</label>
-                        <textarea id="bio"
-                            placeholder="Write a short introduction about your teaching passions, background, and goals..."
+                        <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Short Bio /
+                            About Me</label>
+                        <textarea name="bio"
+                            placeholder="Write a short introduction about your passions, background, and goals..."
                             rows="3"
-                            class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150 resize-y"></textarea>
+                            class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150 resize-y"></textarea>
                     </div>
                 </form>
+
+                <!-- 2. Education Details -->
                 <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
                     <h1
                         class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
@@ -189,30 +187,32 @@
                     <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Education Details</h1>
                 </div>
                 <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
-                <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
 
-                    <!-- Row 2: Email & Phone -->
+                <form id="educationForm"
+                    class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
                     <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">univerxity
-                                / school</label>
-                            <input type="email" placeholder="e.g. PNC University..."
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">University
+                                / School</label>
+                            <input type="text" name="university" placeholder="e.g. PNC University..."
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">major /
-                                field of study</label>
-                            <input type="tel" placeholder="e.g. Information Technology"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Major /
+                                Field of Study</label>
+                            <input type="text" name="major" placeholder="e.g. Information Technology"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">graduation
-                                / year</label>
-                            <input type="tel" placeholder="e.g. 2026 - 2029 (Year 1)"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Graduation
+                                / Year</label>
+                            <input type="text" name="graduationYear" placeholder="e.g. 2026 - 2029 (Year 1)"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                     </div>
                 </form>
+
+                <!-- 3. Skills & Expertise -->
                 <div class="gap-4 ml-2 sm:ml-6 mb-2 mt-4 mr-2 sm:mr-6">
                     <div class="flex flex-col sm:flex-row sm:justify-between gap-3 sm:gap-0">
                         <div class="flex gap-3 sm:gap-4">
@@ -220,7 +220,7 @@
                                 class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
                                 3</h1>
                             <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Skills &
-                                expertise</h1>
+                                Expertise</h1>
                         </div>
                         <button type="button" onclick="addNewRow()"
                             class="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg text-sm font-medium hover:bg-blue-50 transition cursor-pointer self-start sm:self-auto">
@@ -230,20 +230,15 @@
                     <div class="border-t border-gray-300 w-full max-w-4xl mx-auto mt-2"></div>
                 </div>
 
-                <!-- Form Container -->
                 <form id="skillsForm" class="space-y-4 px-2 sm:px-6 mt-6">
-                    <!-- Row Container -->
                     <div id="skillsContainer" class="space-y-4">
-
-                        <!-- Initial Row Example 1 -->
+                        <!-- Skill Row 1 -->
                         <div class="flex items-center gap-2 sm:gap-3 input-row">
                             <input type="text" value="HTML / CSS" placeholder="Skill name"
-                                class="min-w-0 flex-1 px-3 sm:px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-gray-700 transition">
-
+                                class="skill-name min-w-0 flex-1 px-3 sm:px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-gray-700 transition">
                             <div class="w-16 sm:w-24 shrink-0 relative">
                                 <input type="number" value="90" min="1" max="100"
-                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-center text-gray-700 transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
-                                <!-- Custom Up/Down Arrows -->
+                                    class="skill-level w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-center text-gray-700 transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
                                 <div
                                     class="absolute right-2 top-0 bottom-0 flex flex-col justify-center pointer-events-none text-gray-400 text-xs">
                                     <span
@@ -254,7 +249,6 @@
                                         onclick="stepNumber(this, -1)">▼</span>
                                 </div>
                             </div>
-
                             <button type="button" onclick="deleteRow(this)"
                                 class="p-2 sm:p-3 shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -265,14 +259,13 @@
                             </button>
                         </div>
 
-                        <!-- Initial Row Example 2 -->
+                        <!-- Skill Row 2 -->
                         <div class="flex items-center gap-2 sm:gap-3 input-row">
                             <input type="text" value="JavaScript" placeholder="Skill name"
-                                class="min-w-0 flex-1 px-3 sm:px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-gray-700 transition">
-
+                                class="skill-name min-w-0 flex-1 px-3 sm:px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-gray-700 transition">
                             <div class="w-16 sm:w-24 shrink-0 relative">
                                 <input type="number" value="85" min="1" max="100"
-                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-center text-gray-700 transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                                    class="skill-level w-full px-4 py-3 border border-gray-200 rounded-xl outline-none focus:border-blue-500 text-center text-gray-700 transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
                                 <div
                                     class="absolute right-2 top-0 bottom-0 flex flex-col justify-center pointer-events-none text-gray-400 text-xs">
                                     <span
@@ -283,7 +276,6 @@
                                         onclick="stepNumber(this, -1)">▼</span>
                                 </div>
                             </div>
-
                             <button type="button" onclick="deleteRow(this)"
                                 class="p-2 sm:p-3 shrink-0 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -293,18 +285,10 @@
                                 </svg>
                             </button>
                         </div>
-
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="pt-4 flex justify-between items-center">
-                        <div></div>
-                        <button type="submit"
-                            class="px-6 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition cursor-pointer">
-                            Save Changes
-                        </button>
                     </div>
                 </form>
+
+                <!-- 4. Main Project -->
                 <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
                     <h1
                         class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
@@ -312,258 +296,314 @@
                     <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Main Project</h1>
                 </div>
                 <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
-                <div class="bg-[#F8FAFC] px-3 sm:px-6 mx-2 sm:mx-6 rounded-2xl mt-2">
-                    <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
-                        <!-- Top Divider Line -->
 
-                        <!-- Row 1: Name & Title -->
+                <div class="bg-[#F8FAFC] px-3 sm:px-6 mx-2 sm:mx-6 rounded-2xl mt-2">
+                    <form id="projectForm"
+                        class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
                         <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full mt-2">
                             <div class="flex-1 w-full">
                                 <label
                                     class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Project
-                                    name</label>
-                                <input type="text" placeholder="e.g. Campus event Finder"
-                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                                    Name</label>
+                                <input type="text" name="projectName" placeholder="e.g. Campus Event Finder"
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                             </div>
                             <div class="flex-1 w-full">
                                 <label
-                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">category
-                                </label>
-                                <select
-                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 placeholder:normal-case transition-all duration-150">
-                                    <option value="">Web Development</option>
-                                    <option value="">Mobile App</option>
-                                    <option value="">UI/UX Design</option>
-                                    <option value="">Python / AI</option>
-                                    <option value="">LoT</option>
+                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Category</label>
+                                <select name="category"
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Mobile App">Mobile App</option>
+                                    <option value="UI/UX Design">UI/UX Design</option>
+                                    <option value="Python / AI">Python / AI</option>
+                                    <option value="IoT">IoT</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Row 2: Email & Phone -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
                             <div class="flex-1 w-full">
                                 <label
-                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">technologies
-                                    used</label>
-                                <input type="email" placeholder="e.g. React, Node.js, Tailwind"
-                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                                    class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Technologies
+                                    Used</label>
+                                <input type="text" name="technologies" placeholder="e.g. React, Node.js, Tailwind"
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                             </div>
                             <div class="flex-1 w-full">
-                                <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">github
-                                    / demo link</label>
-                                <input type="tel" placeholder="https://github.com..."
-                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                                <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">GitHub
+                                    / Demo Link</label>
+                                <input type="url" name="projectLink" placeholder="https://github.com/..."
+                                    class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                             </div>
                         </div>
 
-                        <!-- Row 3: Short Bio / About Me (Spans Full Width) -->
                         <div class="w-full">
-                            <label for="bio"
-                                class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">project
-                                description</label>
-                            <textarea id="bio" placeholder="Describe key features, challenges solved, and results..."
-                                rows="3"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150 resize-y"></textarea>
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Project
+                                Description</label>
+                            <textarea name="projectDescription"
+                                placeholder="Describe key features, challenges solved, and results..." rows="3"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150 resize-y"></textarea>
                         </div>
                     </form>
                 </div>
+
+                <!-- 5. Achievements & Certificates -->
                 <div class="flex gap-3 sm:gap-4 ml-2 sm:ml-6 mb-4 mt-4">
                     <h1
                         class="bg-blue-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-xl sm:text-2xl rounded-2xl text-white shrink-0">
-                        4</h1>
+                        5</h1>
                     <h1 class="text-xl sm:text-2xl flex justify-center items-center font-bold">Achievements &
                         Certificates</h1>
                 </div>
                 <div class="border-t border-gray-300 w-full max-w-4xl mx-auto"></div>
-                <form class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
+
+                <form id="achievementForm"
+                    class="w-full max-w-4xl mx-auto flex flex-col justify-center items-center gap-6 p-2 sm:p-4">
                     <div class="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">award /
-                                certificate title</label>
-                            <input type="email" placeholder="e.g. 1st Place National hackathon"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Award /
+                                Certificate Title</label>
+                            <input type="text" name="achievementTitle" placeholder="e.g. 1st Place National Hackathon"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                         <div class="flex-1 w-full">
-                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">issuer /
-                                event</label>
-                            <input type="tel" placeholder="e.g. Ministry of Telecom $ IT"
-                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 focus:uppercase placeholder:normal-case transition-all duration-150">
+                            <label class="uppercase block text-xs font-semibold text-gray-600 tracking-wider">Issuer /
+                                Event</label>
+                            <input type="text" name="achievementIssuer" placeholder="e.g. Ministry of Telecom & IT"
+                                class="w-full mt-2 p-2.5 rounded-xl border-2 border-gray-300 outline-none focus:border-blue-600 transition-all duration-150">
                         </div>
                     </div>
                 </form>
+
+                <!-- Action Buttons -->
                 <div class="border-t border-gray-300 w-full max-w-4xl mx-auto my-4"></div>
-                <div class="flex flex-col sm:flex-row justify-between gap-4 px-2 sm:px-6">
-                    <button></button>
-                    <button class="flex flex-col sm:flex-row gap-3 sm:gap-4 font-bold w-full sm:w-auto">
-                        <div
-                            class="bg-gray-100 rounded-xl hover:bg-gray-200 flex justify-center items-center gap-4 p-2 sm:p-3">
-                            <i class="fa-solid fa-eye"></i>
-                            <h1>Quick Preview</h1>
-                        </div>
-                        <div
-                            class="bg-gradient-to-r from-[#2b61f6] to-[#8031f4] rounded-xl flex justify-center items-center gap-4 p-2 sm:p-3 hover:-translate-y-1 duration-300 text-white">
-                            <i class="fa-solid fa-cloud-arrow-up"></i>
-                            <h1 class="text-sm sm:text-base">Save & Publish Portfolio</h1>
-                        </div>
+                <div class="flex flex-col sm:flex-row justify-end gap-4 px-2 sm:px-6">
+                    <button type="button" id="previewBtn"
+                        class="bg-gray-100 rounded-xl hover:bg-gray-200 flex justify-center items-center gap-3 p-3 font-bold transition">
+                        <i class="fa-solid fa-eye"></i>
+                        <span><a href="./personal-portfolio-Onchu-Thida.html">Quick Preview</a> </span>
+                    </button>
+                    <button type="button" id="saveBtn"
+                        class="bg-gradient-to-r from-[#2b61f6] to-[#8031f4] rounded-xl flex justify-center items-center gap-3 p-3 hover:-translate-y-1 duration-300 text-white font-bold">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Save & Publish Portfolio</span>
                     </button>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- footer -->
+    <!-- Footer -->
     <footer class="bg-black text-white px-4 sm:px-8 md:px-16 py-8 sm:py-12">
         <div class="flex flex-col md:flex-row justify-around gap-8 md:gap-12 mb-12 md:mb-28">
             <div class="w-full md:w-72 flex-1">
                 <div class="flex items-center gap-3 mb-6">
                     <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
                         alt="Student Portfolio Logo" />
-                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
-                        Portfolio </h1>
+                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight">
+                        <b class="text-white">Student</b> Portfolio
+                    </h1>
                 </div>
-                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and
-                    beginners
+                <p class="text-sm text-gray-400">A portfolio platform for university students, developers and beginners
                     in tech.</p>
             </div>
 
-            <!-- Quick links -->
             <div class="flex-1 flex flex-col gap-3">
-                <h3 class="">Quick links</h3>
+                <h3>Quick links</h3>
                 <div class="text-gray-400 flex flex-col text-sm gap-2">
+<<<<<<< HEAD
+                    <a href="./index.html" class="hover:text-white duration-200">Home</a>
+                    <a href="./students.html" class="hover:text-white duration-200">Students</a>
+                    <a href="./projects.html" class="hover:text-white duration-200">Projects</a>
+                    <a href="create-portfolio.html" class="hover:text-white duration-200">Create Portfolio</a>
+=======
                     <a href="" class="hover:text-white duration-200">Home</a>
                     <a href="./students.html" class="hover:text-white duration-200">students</a>
                     <a href="" class="hover:text-white duration-200">Project</a>
                     <a href="" class="hover:text-white duration-200">Create portfolio</a>
+>>>>>>> 5b1692fa38c8e8fa9d72162b50f56d79d5a04b79
                 </div>
             </div>
 
-            <!-- Project categories -->
             <div class="flex-1 flex flex-col gap-3">
                 <h3>Project categories</h3>
                 <div class="flex flex-col text-gray-400 text-sm gap-2">
-                    <a href="" class="hover:text-white duration-200">Web Development</a>
-                    <a href="" class="hover:text-white duration-200">Python & Data Science</a>
-                    <a href="" class="hover:text-white duration-200">Mobile Applications</a>
-                    <a href="" class="hover:text-white duration-200">UI/UX Design</a>
+                    <a href="#" class="hover:text-white duration-200">Web Development</a>
+                    <a href="#" class="hover:text-white duration-200">Python & Data Science</a>
+                    <a href="#" class="hover:text-white duration-200">Mobile Applications</a>
+                    <a href="#" class="hover:text-white duration-200">UI/UX Design</a>
                 </div>
             </div>
 
-            <!-- Connect -->
             <div class="flex-1 flex flex-col gap-3">
                 <h3>Connect</h3>
-                <p class="text-sm text-gray-400">Helping the next generation of <br class="hidden sm:block"> software
-                    engineers and creators
-                    get
+                <p class="text-sm text-gray-400">Helping the next generation of software engineers and creators get
                     noticed.</p>
                 <div class="flex gap-6 sm:gap-8">
-                    <!-- github -->
-                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <!-- Linked in -->
-                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <!-- Twitter -->
+                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://x.com/giimin4awr"
-                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <!-- Email -->
-                    <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act"
-                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
+                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white hover:scale-125 transition duration-300"><i
+                            class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
 
         <hr class="border-gray-700 mb-6">
-
         <div
             class="text-sm text-gray-400 flex flex-col sm:flex-row justify-between gap-4 items-center text-center sm:text-left">
-            <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
+            <p>© 2026 Student Portfolio. Built for Everyone.</p>
             <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
-                <a href="" class="hover:text-white duration-200">Privacy policy</a>
-                <a href="" class="hover:text-white duration-200">Terms of service</a>
-                <a href="" class="hover:text-white duration-200">Student guidelines</a>
+                <a href="#" class="hover:text-white duration-200">Privacy policy</a>
+                <a href="#" class="hover:text-white duration-200">Terms of service</a>
+                <a href="#" class="hover:text-white duration-200">Student guidelines</a>
             </div>
         </div>
     </footer>
-</body>
 
-<script>
+    <script>
+        // ========== ប្តូរ URL នេះជា Web App URL របស់អ្នក ==========
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbymAgNmINVuV3wttt-QVU6uFtQa0C3zUGF1FP9YdttoacR2GPsGL-XQZM3Y5QXShmu1Kg/exec";   // ← បិទ URL របស់អ្នកនៅទីនេះ
 
-    function addNewRow() {
-        const skillsContainer = document.getElementById("skillsContainer");
-        const newRow = skillsContainer.querySelector(".input-row").cloneNode(true);
-        const skillInput = newRow.querySelector('input[type="text"]');
-        const levelInput = newRow.querySelector('input[type="number"]');
-
-        skillInput.value = "";
-        levelInput.value = "1";
-        skillsContainer.appendChild(newRow);
-        skillInput.focus();
-    }
-
-    function deleteRow(button) {
-        button.closest(".input-row").remove();
-    }
-
-    function stepNumber(control, amount) {
-        const levelInput = control.closest(".relative").querySelector('input[type="number"]');
-        const currentValue = Number(levelInput.value) || 1;
-        levelInput.value = Math.min(100, Math.max(1, currentValue + amount));
-    }
-
-    const menuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const menuIcon = document.getElementById("menu-icon");
-    const mobileLinks = document.querySelectorAll(".mobile-link");
-
-
-    // Open / Close menu
-    menuBtn.addEventListener("click", () => {
-
-        mobileMenu.classList.toggle("hidden");
-
-        if (mobileMenu.classList.contains("hidden")) {
-
-            // Menu closed
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-
-            menuBtn.setAttribute("aria-expanded", "false");
-
-        } else {
-
-            // Menu opened
-            menuIcon.classList.remove("fa-bars");
-            menuIcon.classList.add("fa-xmark");
-
-            menuBtn.setAttribute("aria-expanded", "true");
+        // ===== Skills Functions =====
+        function addNewRow() {
+            const skillsContainer = document.getElementById("skillsContainer");
+            const newRow = skillsContainer.querySelector(".input-row").cloneNode(true);
+            newRow.querySelector('.skill-name').value = "";
+            newRow.querySelector('.skill-level').value = "50";
+            skillsContainer.appendChild(newRow);
+            newRow.querySelector('.skill-name').focus();
         }
 
-    });
+        function deleteRow(button) {
+            const rows = document.querySelectorAll("#skillsContainer .input-row");
+            if (rows.length > 1) {
+                button.closest(".input-row").remove();
+            } else {
+                alert("ត្រូវមាន Skill យ៉ាងហោចណាស់ 1 ដែរ!");
+            }
+        }
 
+        function stepNumber(control, amount) {
+            const levelInput = control.closest(".relative").querySelector('input[type="number"]');
+            const currentValue = Number(levelInput.value) || 1;
+            levelInput.value = Math.min(100, Math.max(1, currentValue + amount));
+        }
 
-    // Close menu after clicking a link
-    mobileLinks.forEach(link => {
+        // ===== Mobile Menu =====
+        const menuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
 
-        link.addEventListener("click", () => {
-
-            mobileMenu.classList.add("hidden");
-
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-
-            menuBtn.setAttribute("aria-expanded", "false");
-
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            if (mobileMenu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-xmark");
+                menuIcon.classList.add("fa-bars");
+                menuBtn.setAttribute("aria-expanded", "false");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-xmark");
+                menuBtn.setAttribute("aria-expanded", "true");
+            }
         });
 
-    });
+        // ===== Collect Form Data =====
+        function collectFormData() {
+            // Personal
+            const fullName = document.querySelector('input[name="fullName"]').value.trim();
+            const title = document.querySelector('input[name="title"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+            const phone = document.querySelector('input[name="phone"]').value.trim();
+            const bio = document.querySelector('textarea[name="bio"]').value.trim();
 
-</script>
+            // Education
+            const university = document.querySelector('input[name="university"]').value.trim();
+            const major = document.querySelector('input[name="major"]').value.trim();
+            const graduationYear = document.querySelector('input[name="graduationYear"]').value.trim();
+
+            // Skills
+            const skillRows = document.querySelectorAll('#skillsContainer .input-row');
+            const skills = Array.from(skillRows).map(row => {
+                const name = row.querySelector('.skill-name').value.trim();
+                const level = row.querySelector('.skill-level').value;
+                return name ? `${name} (${level}%)` : null;
+            }).filter(Boolean).join(", ");
+
+            // Project
+            const projectName = document.querySelector('input[name="projectName"]').value.trim();
+            const category = document.querySelector('select[name="category"]').value;
+            const technologies = document.querySelector('input[name="technologies"]').value.trim();
+            const projectLink = document.querySelector('input[name="projectLink"]').value.trim();
+            const projectDescription = document.querySelector('textarea[name="projectDescription"]').value.trim();
+
+            // Achievements
+            const achievementTitle = document.querySelector('input[name="achievementTitle"]').value.trim();
+            const achievementIssuer = document.querySelector('input[name="achievementIssuer"]').value.trim();
+            const achievements = achievementTitle ? `${achievementTitle} - ${achievementIssuer}` : "";
+
+            return {
+                fullName,
+                title,
+                email,
+                phone,
+                bio,
+                university,
+                major,
+                graduationYear,
+                skills,
+                projectName,
+                category,
+                technologies,
+                projectLink,
+                projectDescription,
+                achievements
+            };
+        }
+
+        // ===== Save to Google Sheet =====
+        document.getElementById("saveBtn").addEventListener("click", async function () {
+            const data = collectFormData();
+
+            // Validation សាមញ្ញ
+            if (!data.fullName || !data.email) {
+                alert("សូមបំពេញ Full Name និង Email ជាមុនសិន!");
+                return;
+            }
+
+            const btn = this;
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> កំពុងរក្សាទុក...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(SCRIPT_URL, {
+                    method: "POST",
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.result === "success") {
+                    alert("✅ រក្សាទុក Portfolio រួចរាល់!");
+                    // អាច clear form ឬ redirect នៅទីនេះ
+                } else {
+                    alert("❌ មានបញ្ហា: " + result.message);
+                }
+            } catch (error) {
+                console.error(error);
+                alert("❌ មានបញ្ហាក្នុងការភ្ជាប់។ សូមពិនិត្យ SCRIPT_URL និង Internet។");
+            } finally {
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
 
 </html>
