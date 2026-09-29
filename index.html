@@ -23,15 +23,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- 1. Embed the Google Font Link -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
 
 </head>
 
-<body class="bg-[#EEF2FB] font-Inter">
+<body class="bg-[#EEF2FB]">
     <!-- Navbar -->
-    <header class="bg-white border-b border-gray-100 w-full">
+    <header class="fixed left-0 top-0 z-20 w-full border-b border-gray-100 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
 
             <!-- Logo & Title -->
@@ -111,45 +116,41 @@
         </div>
     </header>
     <!-- Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-5 pt-12 sm:pt-20">
-        <div class="flex flex-col gap-4 mb-4">
-            <div class="flex w-full sm:w-auto items-center justify-center bg-[#DBEAFE] px-4 py-2 m-auto rounded-xl">
-                <i class="fa-solid fa-circle text-xs text-blue-500 mr-2"></i>
-                <h2 class="text-blue-600 font-bold text-sm sm:text-base">Empowering Next-Gen IT Talent</h2>
-            </div>
-            <!-- Cover Page -->
-            <div class="flex items-center m-auto">
-                <div class="flex items-center justify-center flex-col gap-4">
-
-                    <h1 id="title1" class="text-center text-4xl sm:text-6xl font-bold">
-                    </h1>
-
-                    <h1 id="title2" class="text-center text-4xl sm:text-6xl font-bold text-[#554DEC]">
-                    </h1>
-
-                    <p class="text-lg sm:text-2xl text-[#667085] text-center">
+    <section class="w-full">
+        <div class="relative isolate flex min-h-screen w-full flex-col items-center justify-center gap-6 overflow-hidden px-5 py-28 text-center sm:px-10">
+            <img src="./images/cover-2.png" alt="" aria-hidden="true"
+                class="absolute inset-0 h-full w-full object-cover object-center">
+            <div class="absolute inset-0 bg-slate-950/60"></div>
+            <div class="relative z-10 flex flex-col items-center gap-6">
+                <div class="flex w-full items-center justify-center rounded-xl bg-white/90 px-4 py-2 sm:w-auto">
+                    <i class="fa-solid fa-circle mr-2 text-xs text-blue-500"></i>
+                    <h2 class="text-sm font-bold text-blue-700 sm:text-base">Empowering Next-Gen IT Talent</h2>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <h1 id="title1" class="text-center text-4xl font-bold text-white sm:text-6xl"></h1>
+                    <h1 id="title2" class="text-center text-4xl font-bold text-blue-200 sm:text-6xl"></h1>
+                    <p class="text-center text-lg text-white sm:text-2xl">
                         Create your professional student portfolio and let the world discover
                         <br class="hidden sm:block">
                         your skills, projects, and achievements in minutes.
                     </p>
-
                 </div>
-            </div>
-            <!-- Button -->
-            <div class="flex w-full sm:w-auto flex-col sm:flex-row gap-4 sm:gap-8 m-auto">
-                <button
-                    class="bg-[#6D41ED] p-4 rounded-lg font-bold text-white text-lg sm:text-xl px-8 hover:-translate-y-1 transition-all duration-300"><a
-                        href="./students.html">Explore Students</a>
-                </button>
-                <button
-                    class="bg-white p-4 rounded-lg font-bold text-[#667085] text-lg sm:text-xl px-8 border hover:bg-gray-100"><a
-                        href="./create.html">Create Portfolio</a>
-                </button>
+                <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:gap-8">
+                    <button
+                        class="rounded-lg bg-[#6D41ED] px-8 p-4 text-lg font-bold text-white transition-all duration-300 hover:-translate-y-1 sm:text-xl"><a
+                            href="./students.html">Explore Students</a>
+                    </button>
+                    <button
+                        class="rounded-lg border bg-white px-8 p-4 text-lg font-bold text-[#667085] hover:bg-gray-100 sm:text-xl"><a
+                            href="./create.html">Create Portfolio</a>
+                    </button>
+                </div>
             </div>
         </div>
         <!-- Stats Banner -->
-        <div class="border mt-8"></div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-16 justify-items-center pt-10 sm:pt-12 text-center">
+        <div class="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-16">
+            <div class="border mt-8"></div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-16 justify-items-center pt-10 sm:pt-12 text-center">
             <div class="">
                 <h1 class="text-4xl font-bold">1,200+</h1>
                 <p class="text-[#667085] text-base sm:text-xl">Student Portfolio</p>
@@ -165,6 +166,7 @@
             <div class="">
                 <h1 class="text-4xl font-bold">1,200+</h1>
                 <p class="text-[#667085] text-base sm:text-xl">Student Portfolio</p>
+            </div>
             </div>
         </div>
     </section>
@@ -254,7 +256,7 @@
                     </div>
                     <button
                         class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
-                        View portfolio
+                        <a href="./personal-portfolio-Lyhov-Sin.html">View portfolio</a>
                     </button>
                 </div>
             </article>
@@ -294,7 +296,7 @@
                     </div>
                     <button
                         class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
-                        View portfolio
+                        <a href="./personal-portfolio-Yasmin-toyeb.html">View portfolio</a>
                     </button>
                 </div>
             </article>
@@ -333,7 +335,7 @@
                     </div>
                     <button
                         class="text-blue-600 text-sm font-medium bg-blue-100 px-3 py-2 rounded-2xl transition-all duration-200 hover:bg-blue-200">
-                        View portfolio
+                        <a href="./personal-portfolio-Onchu-Thida.html">View portfolio</a>
                     </button>
                 </div>
             </article>
@@ -387,6 +389,36 @@
                     <i class="fa-solid fa-circle text-xs text-blue-600"></i>
                     <h3 class="text-base sm:text-xl">C++</h3>
                 </div>
+                <div
+                    class="flex justify-center items-center gap-2 bg-white border border-gray-200 rounded-lg px-2 hover:border-blue-600 cursor-pointer">
+                    <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                    <h3 class="text-base sm:text-xl">UI/UX Design</h3>
+                </div>
+                <div
+                    class="flex justify-center items-center gap-2 bg-white border border-gray-200 rounded-lg px-2 hover:border-blue-600 cursor-pointer">
+                    <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                    <h3 class="text-base sm:text-xl">C++</h3>
+                </div>
+                <div
+                    class="flex justify-center items-center gap-2 bg-white border border-gray-200 rounded-lg px-2 hover:border-blue-600 cursor-pointer">
+                    <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                    <h3 class="text-base sm:text-xl">UI/UX Design</h3>
+                </div>
+                <div
+                    class="flex justify-center items-center gap-2 bg-white border border-gray-200 rounded-lg px-2 hover:border-blue-600 cursor-pointer">
+                    <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                    <h3 class="text-base sm:text-xl">C++</h3>
+                </div>
+                <div
+                    class="flex justify-center items-center gap-2 bg-white border border-gray-200 rounded-lg px-2 hover:border-blue-600 cursor-pointer">
+                    <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                    <h3 class="text-base sm:text-xl">UI/UX Design</h3>
+                </div>
+                <div
+                    class="flex justify-center items-center gap-2 bg-white border border-gray-200 rounded-lg px-2 hover:border-blue-600 cursor-pointer">
+                    <i class="fa-solid fa-circle text-xs text-blue-600"></i>
+                    <h3 class="text-base sm:text-xl">C++</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -405,7 +437,7 @@
 
             <a href="#"
                 class="flex items-center gap-2 text-base font-semibold text-[#2864E8] transition-colors hover:text-[#174BBd] sm:text-lg lg:text-[20px] hover:translate-x-1 duration-300">
-                <span>View All Students</span>
+                <span>View All Projects</span>
                 <span class="text-[28px] leading-none">→</span>
             </a>
         </div>
@@ -421,12 +453,11 @@
 
                 <div class="relative h-48 sm:h-52 lg:h-56">
 
-                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
-                        alt="Students working on laptops" class="h-full w-full object-cover">
+                    <img src="./images/image.png" alt="Students working on laptops" class="h-full w-full object-cover">
 
                     <span
                         class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
-                        create personal portfolio
+                        personal portfolio
                     </span>
 
                 </div>
@@ -468,6 +499,29 @@
                         <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
                             Firebase
                         </span>
+                    </div>
+
+                </div>
+
+                <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                    <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                        <i class="fa-regular fa-eye mr-1"></i>
+                        Details
+                    </a>
+
+                    <div class="flex gap-5 text-slate-500">
+
+                        <a href="https://github.com/yasmintoyeb" class="hover:text-slate-900">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-blue-600">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
 
                     </div>
 
@@ -498,7 +552,7 @@
                 <div class="p-5 sm:p-6">
 
                     <p class="text-sm font-medium text-blue-600">
-                        By Yasmin TOYEB
+                        By Lyhov SIN
                     </p>
 
                     <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
@@ -506,7 +560,8 @@
                     </h3>
 
                     <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
-                        A simple dashboard for managing books, borrowers, and library records efficiently.
+                        Library System is a simple dashboard for managing books, borrowers, and library records
+                        efficiently.
                     </p>
 
 
@@ -529,24 +584,47 @@
 
                 </div>
 
+                <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                    <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                        <i class="fa-regular fa-eye mr-1"></i>
+                        Details
+                    </a>
+
+                    <div class="flex gap-5 text-slate-500">
+
+                        <a href="https://github.com/lyhovsinweb11-ux" class="hover:text-slate-900">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-blue-600">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
             </article>
 
 
-            <!-- =========================
-                 PROJECT 3
-            ========================== -->
+            <!-- PROJECT 3 -->
 
             <article
                 class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
 
                 <div class="relative h-48 sm:h-52 lg:h-56">
 
-                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80"
-                        alt="Earth from space" class="h-full w-full object-cover">
+
+                    <img src="https://i.pinimg.com/736x/65/e7/a1/65e7a1bc3c3e2140b8dcb974aab4c63e.jpg"
+                        alt="Students working on laptops" class="h-full w-full object-cover">
 
                     <span
                         class="absolute left-3 top-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm sm:left-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm">
-                        AI
+                        Booking System
                     </span>
 
                 </div>
@@ -556,17 +634,16 @@
                 <div class="p-5 sm:p-6">
 
                     <p class="text-sm font-medium text-blue-600">
-                        By Sall Kimhour
+                        By Thida ONCHU
                     </p>
 
                     <h3 class="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">
-                        EcoTrack AI Carbon Monitor
+                        Booking System Room
                     </h3>
 
-
                     <p class="mt-3 text-sm leading-6 text-slate-500 sm:text-base">
-                        Machine learning application analyzing individual daily
-                        carbon footprints with personalized reduction actions.
+                        A web-based booking system for managing reservations and appointments
+                        built with modern HTML, Tailwind CSS, and JS.
                     </p>
 
 
@@ -574,24 +651,50 @@
                     <div class="mt-5 flex flex-wrap gap-2">
 
                         <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
-                            Python
+                            HTML
                         </span>
 
                         <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
-                            PyTorch
+                            Tailwind CSS
                         </span>
 
                         <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
-                            React
+                            JavaScript
                         </span>
 
                         <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs text-slate-600 sm:text-sm">
-                            FastAPI
+                            Firebase
                         </span>
 
                     </div>
 
                 </div>
+
+                <div class="border-t border-slate-100
+                            px-6 py-4
+                            flex items-center justify-between">
+
+                    <a href="#" class="text-sm font-semibold text-slate-700
+                              hover:text-blue-600">
+                        <i class="fa-regular fa-eye mr-1"></i>
+                        Details
+                    </a>
+
+                    <div class="flex gap-5 text-slate-500">
+
+                        <a href="https://github.com/ornchuthida-oss" class="hover:text-slate-900">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="#" class="hover:text-blue-600">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </article>
         </div>
         <!-- Call-to-Action Section -->
         <div class="my-10 bg-gradient-to-r from-[#2D5FEB] to-[#7040ED] min-h-[50vh] rounded-3xl">
@@ -605,11 +708,11 @@
                     recruiter-friendly.</p>
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
                     <button
-                        class="bg-white p-4 rounded-lg font-bold text-blue-700 text-lg sm:text-xl px-8 hover:-translate-y-1 transition-all duration-300">Build
-                        My Free Portfolio</button>
+                        class="bg-white p-4 rounded-lg font-bold text-blue-700 text-lg sm:text-xl px-8 hover:-translate-y-1 transition-all duration-300"><a href="./create.html">Build My Free Portfolio</a> 
+                        </button>
                     <button
-                        class="text-white borde border-white p-4 rounded-lg font-bold text-lg sm:text-xl px-8 border hover:bg-[#6060EE]">Browse
-                        Portfolio</button>
+                        class="text-white borde border-white p-4 rounded-lg font-bold text-lg sm:text-xl px-8 border hover:bg-[#6060EE]"><a href="./students.html">Browse Portfolio</a>
+                        </button>
                 </div>
             </div>
         </div>
@@ -702,150 +805,255 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="/src/main.js"></script>
+    <script>
+        (() => {
+
+            // Mobile menu
+
+            const menuBtn =
+                document.getElementById("mobile-menu-btn");
+
+            const mobileMenu =
+                document.getElementById("mobile-menu");
+
+            const menuIcon =
+                document.getElementById("menu-icon");
+
+
+            if (menuBtn && mobileMenu && menuIcon) {
+                menuBtn.addEventListener("click", function () {
+
+                    mobileMenu.classList.toggle("hidden");
+                    const isExpanded = !mobileMenu.classList.contains("hidden");
+                    menuBtn.setAttribute("aria-expanded", String(isExpanded));
+
+
+                    if (!isExpanded) {
+
+                        menuIcon.classList.remove("fa-xmark");
+                        menuIcon.classList.add("fa-bars");
+
+                    } else {
+
+                        menuIcon.classList.remove("fa-bars");
+                        menuIcon.classList.add("fa-xmark");
+
+                    }
+
+                });
+            }
+
+
+
+            // Show / Hide Password
+
+            const password =
+                document.getElementById("password");
+
+            const showPassword =
+                document.getElementById("showPassword");
+
+
+            if (password && showPassword) {
+                showPassword.addEventListener("click", function () {
+
+                    if (password.type === "password") {
+
+                        password.type = "text";
+
+                        showPassword.innerHTML =
+                            '<i class="fa-regular fa-eye-slash"></i>';
+
+                    } else {
+
+                        password.type = "password";
+
+                        showPassword.innerHTML =
+                            '<i class="fa-regular fa-eye"></i>';
+
+                    }
+
+                });
+            }
+
+        })();
+    </script>
+    <script>
+        (() => {
+            const texts = [
+                {
+                    element: document.getElementById("title1"),
+                    text: "Show Your Skills."
+                },
+                {
+                    element: document.getElementById("title2"),
+                    text: "Build Your Future."
+                }
+            ];
+
+            // Typing
+            function typeText(element, text, speed = 180) {
+                return new Promise((resolve) => {
+                    let index = 0;
+
+                    const typing = setInterval(() => {
+                        element.textContent += text[index];
+                        index++;
+
+                        if (index >= text.length) {
+                            clearInterval(typing);
+                            resolve();
+                        }
+                    }, speed);
+                });
+            }
+
+            // Deleting
+            function deleteText(element, speed = 100) {
+                return new Promise((resolve) => {
+                    const deleting = setInterval(() => {
+                        element.textContent =
+                            element.textContent.slice(0, -1);
+
+                        if (element.textContent.length === 0) {
+                            clearInterval(deleting);
+                            resolve();
+                        }
+                    }, speed);
+                });
+            }
+
+            async function animation() {
+                while (true) {
+
+                    // Type first line slowly
+                    await typeText(texts[0].element, texts[0].text, 180);
+
+                    // Small pause
+                    await new Promise(resolve =>
+                        setTimeout(resolve, 700)
+                    );
+
+                    // Type second line slowly
+                    await typeText(texts[1].element, texts[1].text, 180);
+
+                    // Keep text on screen
+                    await new Promise(resolve =>
+                        setTimeout(resolve, 3000)
+                    );
+
+                    // Delete second line slowly
+                    await deleteText(texts[1].element, 100);
+
+                    // Delete first line slowly
+                    await deleteText(texts[0].element, 100);
+
+                    // Pause before starting again
+                    await new Promise(resolve =>
+                        setTimeout(resolve, 1000)
+                    );
+                }
+            }
+
+            animation();
+        })();
+    </script>
+    <script>
+        (() => {
+            const form = document.querySelector("form");
+
+            const style = document.createElement("style");
+
+            style.textContent = `
+    form {
+        position: relative;
+        z-index: 1;
+        border-radius: 1rem;
+    }
+
+    form::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 2px;
+        border-radius: 1rem;
+
+        background: linear-gradient(
+            90deg,
+            #2563eb,
+            #2563eb,
+            transparent,
+            transparent,
+            #2563eb
+        );
+
+        background-size: 300% 100%;
+        animation: borderMove 10s linear infinite;
+
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+
+        pointer-events: none;
+    }
+
+    @keyframes borderMove {
+        0% {
+            background-position: 300% 0;
+        }
+
+        100% {
+            background-position: 0% 0;
+        }
+    }
+`;
+
+            document.head.appendChild(style);
+        })();
+    </script>
+    <script>
+        (() => {
+            const skillsContainer = document.querySelector(".flex.flex-wrap.justify-center.gap-3");
+
+            if (skillsContainer) {
+                skillsContainer.classList.add("skills-running");
+
+                const style = document.createElement("style");
+
+                style.textContent = `
+        .skills-running {
+            flex-wrap: nowrap !important;
+            overflow: hidden;
+            justify-content: flex-start !important;
+            width: 100%;
+        }
+
+        .skills-running > div {
+            flex-shrink: 0;
+            animation: moveSkills 12s linear infinite;
+        }
+
+        @keyframes moveSkills {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-120vw);
+            }
+        }
+    `;
+
+                document.head.appendChild(style);
+            }
+        })();
+    </script>
+
+    
+
 </body>
-<script>
-
-    // Mobile menu
-
-    const menuBtn =
-        document.getElementById("mobile-menu-btn");
-
-    const mobileMenu =
-        document.getElementById("mobile-menu");
-
-    const menuIcon =
-        document.getElementById("menu-icon");
-
-
-    menuBtn.addEventListener("click", function () {
-
-        mobileMenu.classList.toggle("hidden");
-
-
-        if (mobileMenu.classList.contains("hidden")) {
-
-            menuIcon.classList.remove("fa-xmark");
-            menuIcon.classList.add("fa-bars");
-
-        } else {
-
-            menuIcon.classList.remove("fa-bars");
-            menuIcon.classList.add("fa-xmark");
-
-        }
-
-    });
-
-
-
-    // Show / Hide Password
-
-    const password =
-        document.getElementById("password");
-
-    const showPassword =
-        document.getElementById("showPassword");
-
-
-    showPassword.addEventListener("click", function () {
-
-        if (password.type === "password") {
-
-            password.type = "text";
-
-            showPassword.innerHTML =
-                '<i class="fa-regular fa-eye-slash"></i>';
-
-        } else {
-
-            password.type = "password";
-
-            showPassword.innerHTML =
-                '<i class="fa-regular fa-eye"></i>';
-
-        }
-
-    });
-
-</script>
-<script>
-    const texts = [
-        {
-            element: document.getElementById("title1"),
-            text: "Show Your Skills."
-        },
-        {
-            element: document.getElementById("title2"),
-            text: "Build Your Future."
-        }
-    ];
-
-    // Typing
-    function typeText(element, text, speed = 180) {
-        return new Promise((resolve) => {
-            let index = 0;
-
-            const typing = setInterval(() => {
-                element.textContent += text[index];
-                index++;
-
-                if (index >= text.length) {
-                    clearInterval(typing);
-                    resolve();
-                }
-            }, speed);
-        });
-    }
-
-    // Deleting
-    function deleteText(element, speed = 100) {
-        return new Promise((resolve) => {
-            const deleting = setInterval(() => {
-                element.textContent =
-                    element.textContent.slice(0, -1);
-
-                if (element.textContent.length === 0) {
-                    clearInterval(deleting);
-                    resolve();
-                }
-            }, speed);
-        });
-    }
-
-    async function animation() {
-        while (true) {
-
-            // Type first line slowly
-            await typeText(texts[0].element, texts[0].text, 180);
-
-            // Small pause
-            await new Promise(resolve =>
-                setTimeout(resolve, 700)
-            );
-
-            // Type second line slowly
-            await typeText(texts[1].element, texts[1].text, 180);
-
-            // Keep text on screen
-            await new Promise(resolve =>
-                setTimeout(resolve, 3000)
-            );
-
-            // Delete second line slowly
-            await deleteText(texts[1].element, 100);
-
-            // Delete first line slowly
-            await deleteText(texts[0].element, 100);
-
-            // Pause before starting again
-            await new Promise(resolve =>
-                setTimeout(resolve, 1000)
-            );
-        }
-    }
-
-    animation();
-</script>
 
 </html>
