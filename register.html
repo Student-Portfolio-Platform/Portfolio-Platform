@@ -3,17 +3,39 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register | Student Portfolio Platform</title>
+    <meta name="description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Student Portfolio Platform" />
+    <meta property="og:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Student Portfolio Platform" />
+    <meta name="twitter:description"
+        content="Discover student portfolios, projects, skills, and achievements from emerging IT talent." />
+    <title>Student Portfolio Platform | Discover IT Talent</title>
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/png" href="images/image copy.png" classs="rounded-2xl" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html, body, * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-[#EEF2FB] font-[Inter]">
+<body class="bg-[#EEF2FB]">
 
     <!-- Navbar -->
-    <header class="bg-white border-b border-gray-100 w-full">
+    <header class="bg-white border-b border-gray-100 w-full fixed">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <img class="w-12 h-12 sm:w-16 sm:h-16 object-contain" src="./images/logo.png" alt="Logo" />
@@ -35,13 +57,8 @@
                     href="./login.html">
                     <i class="fa-regular fa-user mr-2"></i> Login
                 </a>
-<<<<<<< HEAD
                 <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-all"
                     href="./create-portfolio.html">
-=======
-                <a class="bg-[#2563EB] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors hover:-translate-y-1 transition-all duration-300"
-                    href="./create.html">
->>>>>>> cc9a09b6f9194f8ac042694c39fb2d4f9d054bc1
                     Get Started
                 </a>
             </div>
@@ -60,24 +77,15 @@
                         <i class="fa-solid fa-house mr-3 w-5"></i> Home
                     </a>
                     <a href="./students.html"
-<<<<<<< HEAD
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] flex items-center">
-=======
-                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
->>>>>>> cc9a09b6f9194f8ac042694c39fb2d4f9d054bc1
                         <i class="fa-solid fa-users mr-3 w-5"></i> Students
                     </a>
                     <a href="./projects.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] flex items-center">
                         <i class="fa-solid fa-folder-open mr-3 w-5"></i> Projects
                     </a>
-<<<<<<< HEAD
                     <a href="./create-portfolio.html"
                         class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] flex items-center">
-=======
-                    <a href="./create.html"
-                        class="px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-[#EDF5FF] hover:text-[#2563EB] transition flex items-center">
->>>>>>> cc9a09b6f9194f8ac042694c39fb2d4f9d054bc1
                         <i class="fa-solid fa-pen-to-square mr-3 w-5"></i> Create Portfolio
                     </a>
                 </div>
@@ -86,19 +94,15 @@
                         class="flex items-center justify-center text-[#1A73E8] border border-[#DADCE0] px-5 py-3 rounded-lg font-medium hover:bg-[#EDF5FF]">
                         <i class="fa-regular fa-user mr-2"></i> Login
                     </a>
-<<<<<<< HEAD
                     <a href="./create-portfolio.html"
                         class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold">
-=======
-                    <a href="./create.html"
-                        class="flex items-center justify-center bg-[#2563EB] text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
->>>>>>> cc9a09b6f9194f8ac042694c39fb2d4f9d054bc1
                         Get Started
                     </a>
                 </div>
             </nav>
         </div>
     </header>
+    <div class="h-[20vh]"></div>
 
     <!-- REGISTER SECTION -->
     <section class="min-h-[calc(100vh-96px)] flex justify-center items-center px-4 py-10">
@@ -191,71 +195,91 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#0F172A] text-white px-4 sm:px-8 md:px-12 py-10 sm:py-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10 mb-12">
-            <div class="md:w-72">
-                <div class="flex items-center gap-3 mb-5">
-                    <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png" alt="Logo">
-                    <h1 class="font-bold text-xl"><span class="text-white">Student</span> <span
-                            class="text-[#2563EB]">Portfolio</span></h1>
+    <!-- footer -->
+
+    <footer class="bg-black text-white px-4 sm:px-8 lg:px-16 py-12">
+        <div class="flex flex-col md:flex-row justify-around gap-12 mb-16 md:mb-28">
+            <div class="w-full md:w-72 flex-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
+                        alt="Student Portfolio Logo" />
+                    <h1 class="text-[#2563EB] font-bold text-xl tracking-tight"> <b class="text-white">Student</b>
+                        Portfolio </h1>
                 </div>
                 <p class="text-sm text-gray-400">A portfolio platform for university students, developers and beginners
                     in tech.</p>
             </div>
 
-<<<<<<< HEAD
-            <div class="flex flex-col gap-3">
-                <h3 class="font-semibold">Quick links</h3>
-                <div class="text-gray-400 flex flex-col text-sm gap-2">
-                    <a href="./index.html" class="hover:text-white">Home</a>
-                    <a href="./students.html" class="hover:text-white">Students</a>
-                    <a href="./projects.html" class="hover:text-white">Projects</a>
-                    <a href="./create-portfolio.html" class="hover:text-white">Create Portfolio</a>
-=======
             <!-- Quick links -->
 
             <div class="flex-1 flex flex-col gap-3">
                 <h3 class="">Quick links</h3>
-                <div class="text-gray-400 flex flex-col text-sm  gap-2">
-                    <a href="./index.html" class="hover:text-white duration-200">Home</a>
-                    <a href="./students.html" class="hover:text-white duration-200">students</a>
-                    <a href="./projects.html" class="hover:text-white duration-200">Project</a>
-                    <a href="./create.html" class="hover:text-white duration-200">Create portfolio</a>
->>>>>>> cc9a09b6f9194f8ac042694c39fb2d4f9d054bc1
+                <div class="text-gray-400 flex flex-col text-sm flex flex-col gap-2">
+                    <a href="" class="hover:text-white duration-200">Home</a>
+                    <a href="" class="hover:text-white duration-200">students</a>
+                    <a href="" class="hover:text-white duration-200">Project</a>
+                    <a href="" class="hover:text-white duration-200">Create portfolio</a>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-3">
-                <h3 class="font-semibold">Project categories</h3>
-                <div class="flex flex-col text-gray-400 text-sm gap-2">
-                    <a href="#" class="hover:text-white">Web Development</a>
-                    <a href="#" class="hover:text-white">Python & Data Science</a>
-                    <a href="#" class="hover:text-white">Mobile Applications</a>
-                    <a href="#" class="hover:text-white">UI/UX Design</a>
+            <!-- Project categories -->
+
+            <div class="flex-1 flex flex-col gap-3 ">
+                <h3>Project categories</h3>
+                <div class="flex flex-col text-gray-400 text-sm flex flex-col text-sm flex flex-col gap-2">
+                    <a href="" class="hover:text-white duration-200">Web Development</a>
+                    <a href="" class="hover:text-white duration-200">Python & Data Science</a>
+                    <a href="" class="hover:text-white duration-200">Mobile Applications</a>
+                    <a href="" class="hover:text-white duration-200">UI/UX Design</a>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-3">
-                <h3 class="font-semibold">Connect</h3>
-                <p class="text-sm text-gray-400">Helping the next generation of software engineers get noticed.</p>
-                <div class="flex gap-6 text-xl">
-                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio"
-                        class="hover:text-white"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/" class="hover:text-white"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://x.com/giimin4awr" class="hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+            <!-- Connect -->
+
+            <div class="flex-1 flex flex-col gap-3">
+                <h3>Connect</h3>
+                <p class="text-sm text-gray-400">Helping the next generation of <br> software engineers and creators get
+                    noticed.</p>
+                <div class="flex gap-8">
+
+                    <!-- github -->
+
+                    <a href="https://github.com/Student-Portfolio-Platform/Student-Portfolio">
+                        <i class="fa-brands fa-github" class="hover:"></i>
+                    </a>
+
+                    <!-- Linked in -->
+
+                    <a href="https://www.linkedin.com/in/yasmin-toyeb-999743432/">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- Twitter -->
+
+                    <a href="https://x.com/giimin4awr"
+                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <!-- Email -->
+
+                    <a href="https://myaccount.google.com/?hl=en&utm_source=OGB&utm_medium=act"
+                        class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
                 </div>
             </div>
         </div>
 
         <hr class="border-gray-700 mb-6">
-        <div
-            class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>© 2026 Student Portfolio. Built for Everyone.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-white">Privacy policy</a>
-                <a href="#" class="hover:text-white">Terms of service</a>
+
+        <div class="text-sm text-gray-400 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between"
+            class="text-gray-400 hover:text-white hover:scale-125 transition duration-300">
+            <p class="text-sm">© 2026 Student Portfolio. Built for Everyone.</p>
+            <div class="flex flex-wrap gap-x-6 gap-y-2">
+                <a href="" class="hover:text-white duration-200">Privacy policy</a>
+                <a href="" class="hover:text-white duration-200">Terms of service</a>
+                <a href="" class="hover:text-white duration-200">Student guidelines</a>
             </div>
         </div>
     </footer>
