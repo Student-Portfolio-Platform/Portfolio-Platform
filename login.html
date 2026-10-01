@@ -31,7 +31,7 @@
 <body class="bg-[#EEF2FB] font-[Inter]">
 
     <!-- Navbar -->
-    <header class="bg-white border-b border-gray-100 w-full fixed top-0 inset-x-0 z-50">
+    <header class="bg-white border-b border-gray-100 w-full sticky top-0 inset-x-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <img class="w-12 h-12 sm:w-16 sm:h-16 object-contain" src="./images/logo.png" alt="Logo" />
@@ -97,10 +97,8 @@
             </nav>
         </div>
     </header>
-    <div class="h-[15vh]"></div>
-
     <!-- LOGIN SECTION -->
-    <section class="min-h-[calc(100vh-96px)] flex justify-center items-center px-4 py-10">
+    <section class="min-h-[calc(100svh-5rem)] md:min-h-[calc(100svh-6rem)] flex justify-center items-center px-4 sm:px-6 py-8 sm:py-10">
         <div
             class="w-full max-w-[464px] bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-xl overflow-hidden">
 
@@ -172,8 +170,8 @@
     <!-- footer -->
 
     <footer class="bg-black text-white px-4 sm:px-8 lg:px-16 py-10 sm:py-12">
-        <div class="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-around gap-8 lg:gap-12 mb-12 lg:mb-28">
-            <div class="w-full sm:w-72 sm:flex-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 lg:mb-28">
+            <div>
                 <div class="flex items-center gap-3 mb-6">
                     <img class="w-10 h-10 object-contain rounded-xl" src="./images/logo.png"
                         alt="Student Portfolio Logo" />
@@ -186,7 +184,7 @@
 
             <!-- Quick links -->
 
-            <div class="w-full sm:w-auto sm:flex-1 flex flex-col gap-3">
+            <div class="flex flex-col gap-3">
                 <h3 class="">Quick links</h3>
                 <div class="text-gray-400 flex flex-col text-sm flex flex-col gap-2">
                     <a href="" class="hover:text-white duration-200">Home</a>
@@ -198,7 +196,7 @@
 
             <!-- Project categories -->
 
-            <div class="w-full sm:w-auto sm:flex-1 flex flex-col gap-3 ">
+            <div class="flex flex-col gap-3">
                 <h3>Project categories</h3>
                 <div class="flex flex-col text-gray-400 text-sm flex flex-col text-sm flex flex-col gap-2">
                     <a href="" class="hover:text-white duration-200">Web Development</a>
@@ -210,7 +208,7 @@
 
             <!-- Connect -->
 
-            <div class="w-full sm:w-auto sm:flex-1 flex flex-col gap-3">
+            <div class="flex flex-col gap-3">
                 <h3>Connect</h3>
                 <p class="text-sm text-gray-400">Helping the next generation of software engineers and creators get
                     noticed.</p>
